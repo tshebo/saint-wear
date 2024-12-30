@@ -26,13 +26,13 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
             <div className="space-y-6">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
                 Born from the streets and raised in the vibrant culture of urban
-                life, Saintwear is more than just clothing – it's a statement for
+                life, Saintwear is more than just clothing – it&#39;s a statement for
                 individuals and businesses alike.
               </p>
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
                 We believe in the power of self-expression through bold colors,
                 daring patterns, and cutting-edge designs that defy convention,
-                whether you're an individual or a forward-thinking company.
+                whether you&#39;re an individual or a forward-thinking company.
               </p>
             </div>
             <div className="pt-4">
