@@ -4,43 +4,47 @@ import { ChevronRight, Briefcase } from 'lucide-react'
 
 export default function Hero({ bebasNeue }: { bebasNeue: any }) {
   return (
-    <section className="max-w-[2000px] mx-auto px-8 py-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <h1 className={`${bebasNeue.className} text-8xl md:text-9xl font-bold text-black leading-none hover:text-blue-600 transition-colors`}>
+    <section className="max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="space-y-6 sm:space-y-8">
+          <h1 className={`${bebasNeue.className} text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-black leading-none hover:text-blue-600 transition-colors`}>
             BOLD<br />VIBRANT<br />STYLE
           </h1>
-          <p className="text-xl text-black font-semibold">
+          <p className="text-lg sm:text-xl text-black font-semibold max-w-2xl">
             Saintwear: Where fashion meets attitude for individuals and businesses
           </p>
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg" 
-              className="bg-blue-600 text-white hover:bg-black transition-colors text-lg px-8 py-6"
+              className="bg-blue-600 text-white hover:bg-black transition-colors text-base sm:text-lg w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6"
             >
-              Shop Collection <ChevronRight className="ml-2 h-6 w-6" />
+              <span className="flex items-center justify-center">
+                Shop Collection <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
+              </span>
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors text-lg px-8 py-6"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors text-base sm:text-lg w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-6"
             >
-              Business Solutions <Briefcase className="ml-2 h-6 w-6" />
+              <span className="flex items-center justify-center">
+                Business Solutions <Briefcase className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
+              </span>
             </Button>
           </div>
         </div>
-        <div className="relative group">
-          <div className="absolute inset-0 bg-blue-600 transform translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
-          <Image
-            src="/hero.png?height=800&width=800"
-            alt="Saintwear Showcase"
-            width={800}
-            height={800}
-            className="relative z-10 group-hover:scale-95 transition-transform duration-300"
-          />
+        <div className="relative group mt-8 lg:mt-0">
+          <div className="absolute inset-0 bg-blue-600 transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-300"></div>
+          <div className="relative z-10 aspect-square max-w-2xl mx-auto">
+            <Image
+              src="/hero.png?height=800&width=800"
+              alt="Saintwear Showcase"
+              fill
+              className="object-cover group-hover:scale-95 transition-transform duration-300"
+            />
+          </div>
         </div>
       </div>
     </section>
   )
 }
-
