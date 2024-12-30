@@ -1,36 +1,100 @@
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export default function Featured({ bebasNeue }: { bebasNeue: any }) {
+  const collections = [
+    {
+      title: "Urban Pulse Collection",
+      description: "Bold. Daring. Unforgettable.",
+      tags: ["New Season", "Trending"],
+      image: "/hero.png",
+      alt: "Model wearing urban streetwear against city backdrop"
+    },
+    {
+      title: "Street Dreams Series",
+      description: "Bold. Daring. Unforgettable.",
+      tags: ["Limited Edition", "Best Seller"],
+      image: "/hero.png",
+      alt: "Street style fashion showcase in urban setting"
+    },
+    {
+      title: "Bold Statement Line",
+      description: "Bold. Daring. Unforgettable.",
+      tags: ["Premium", "Exclusive"],
+      image: "/hero.png",
+      alt: "Contemporary fashion with bold patterns and colors"
+    }
+  ];
+
   return (
-    <section className="bg-yellow-400 py-24 px-8">
-      <div className="max-w-[2000px] mx-auto">
-        <h2
-          className={`${bebasNeue.className} text-6xl md:text-8xl font-bold mb-12`}
-        >
-          FEATURED
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-          {[
-            "Urban Pulse Collection",
-            "Street Dreams Series",
-            "Bold Statement Line",
-          ].map((item, index) => (
-            <div key={index} className="space-y-4 group">
-              <div className="relative overflow-hidden bg-blue-600">
-                <Image
-                  src={`/hero.png?height=800&width=600&text=${item}`}
-                  alt={item}
-                  width={600}
-                  height={800}
-                  className="w-full aspect-[3/4] object-cover transform group-hover:scale-110 transition-transform duration-700"
-                />
+    <section className="relative bg-gradient-to-b from-yellow-400 to-yellow-300 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
+          backgroundSize: '24px 24px'
+        }}/>
+      </div>
+
+      <div className="max-w-[2000px] mx-auto relative">
+        {/* Section Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 lg:mb-16">
+          <div>
+            <div className="w-16 h-1 bg-black mb-6 hidden sm:block"/>
+            <h2 className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold leading-none`}>
+              FEATURED
+            </h2>
+          </div>
+          <p className="text-lg sm:text-xl text-black/70 mt-4 sm:mt-0">
+            Discover our latest collections
+          </p>
+        </div>
+
+        {/* Featured Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {collections.map((item, index) => (
+            <div key={index} className="group cursor-pointer">
+              {/* Image Container */}
+              <div className="relative overflow-hidden rounded-lg mb-6">
+                {/* Background Shape */}
+                <div className="absolute inset-0 bg-blue-600 transform group-hover:scale-95 transition-transform duration-500 rounded-lg"/>
+                
+                {/* Image Wrapper */}
+                <div className="relative z-10 aspect-[3/4] transform group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"/>
+                </div>
               </div>
-              <h3
-                className={`${bebasNeue.className} text-3xl font-bold group-hover:text-blue-600 transition-colors`}
-              >
-                {item}
-              </h3>
-              <p className="text-lg">Bold. Daring. Unforgettable.</p>
+
+              {/* Content */}
+              <div className="space-y-4">
+                {/* Tags */}
+                <div className="flex gap-2 flex-wrap">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex}
+                      className="text-xs font-semibold bg-blue-600 text-white px-3 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title and Description */}
+                <div className="space-y-2">
+                  <h3 className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}>
+                    {item.title}
+                    <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"/>
+                  </h3>
+                  <p className="text-base sm:text-lg text-black/70">{item.description}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
