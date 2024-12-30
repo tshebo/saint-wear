@@ -36,7 +36,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
                 className="bg-blue-600 text-white hover:bg-black transition-all duration-300 text-base sm:text-lg w-full sm:w-auto px-8 py-6 shadow-lg hover:shadow-xl group"
               >
                 <span className="flex items-center justify-center">
-                  Shop Collection 
+                  View Collections
                   <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>

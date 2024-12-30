@@ -97,7 +97,7 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
           <div className="space-y-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 space-y-8">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                Have a question or want to collaborate? Reach out to us. We'd
+                Have a question or want to collaborate? Reach out to us. We&apos;d
                 love to hear from you!
               </p>
 
@@ -158,7 +158,7 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
                   <h3 className="text-white text-xl font-semibold">
                     Message Sent!
                   </h3>
-                  <p className="text-white/70">We'll get back to you soon.</p>
+                  <p className="text-white/70">We&apos;ll get back to you soon.</p>
                   <Button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-4 bg-yellow-400 text-black hover:bg-white hover:text-blue-600 transition-all duration-300"
