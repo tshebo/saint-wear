@@ -13,7 +13,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-xl text-white">
-              Elevate your brand with Saintwear's corporate solutions. From
+              Elevate your brand with Saintwear&#39;s corporate solutions. From
               custom uniforms to event merchandise, we bring our bold style to
               your business needs.
             </p>

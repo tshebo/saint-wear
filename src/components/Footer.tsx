@@ -7,7 +7,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h3 className={`${bebasNeue.className} text-3xl font-bold mb-6`}>ABOUT SAINTWEAR</h3>
-            <p className="text-lg">Redefining urban fashion with bold, vibrant styles for individuals and businesses. From street to boardroom, we've got you covered.</p>
+            <p className="text-lg">Redefining urban fashion with bold, vibrant styles for individuals and businesses. From street to boardroom, we&#39;ve got you covered.</p>
           </div>
           <div>
             <h3 className={`${bebasNeue.className} text-3xl font-bold mb-6`}>QUICK LINKS</h3>

@@ -22,7 +22,7 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
             <p className="text-xl text-white">
-              Have a question or want to collaborate? Reach out to us. We'd love
+              Have a question or want to collaborate? Reach out to us. We&#39;d love
               to hear from you!
             </p>
             <div className="space-y-4">
