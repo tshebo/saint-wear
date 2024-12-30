@@ -1,22 +1,41 @@
-import { montserrat } from '@/lib/fonts'
-import Navbar from '@/components/Navbar'
-import HeroSection from '@/components/HeroSection'
-import CategoryGrid from '@/components/CategoryGrid'
-import TrendingProducts from '@/components/TrendingProducts'
-import ModelShowcase from '@/components/ModelShowcase'
-import Footer from '@/components/Footer'
+import { Montserrat, Bebas_Neue } from "next/font/google";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import OurStory from "@/components/OurStory";
+import Featured from "@/components/Featured";
+import WearTheAttitude from "@/components/WearTheAttitude";
+import BusinessSolutions from "@/components/BusinessSolutions";
+import Contact from "@/components/Contact";
+import JoinTheMovement from "@/components/JoinTheMovement";
+import Footer from "@/components/Footer";
+import CustomCursor from "@/components/CustomCursor";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   return (
-    <main className={`min-h-screen bg-yellow-400 ${montserrat.className}`}>
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <Navbar />
-        <HeroSection />
-        <CategoryGrid />
-        <TrendingProducts />
-        <ModelShowcase />
+    <main className={`min-h-screen ${montserrat.className} cursor-none`}>
+      <CustomCursor />
+      <div className="bg-yellow-400">
+        <Navbar bebasNeue={bebasNeue} />
+        <Hero bebasNeue={bebasNeue} />
       </div>
-      <Footer />
+      <OurStory bebasNeue={bebasNeue} />
+      <Featured bebasNeue={bebasNeue} />
+      <WearTheAttitude bebasNeue={bebasNeue} />
+      <BusinessSolutions bebasNeue={bebasNeue} />
+      <Contact bebasNeue={bebasNeue} />
+      <JoinTheMovement bebasNeue={bebasNeue} />
+      <Footer bebasNeue={bebasNeue} />
     </main>
-  )
+  );
 }
