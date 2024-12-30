@@ -34,7 +34,7 @@ export default function Home() {
       <WearTheAttitude bebasNeue={bebasNeue} />
       <BusinessSolutions bebasNeue={bebasNeue} />
       <Contact bebasNeue={bebasNeue} />
-      <JoinTheMovement bebasNeue={bebasNeue} />
+      {/* <JoinTheMovement bebasNeue={bebasNeue} /> */}
       <Footer bebasNeue={bebasNeue} />
     </main>
   );

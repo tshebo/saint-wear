@@ -35,7 +35,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
                 whether you&#39;re an individual or a forward-thinking company.
               </p>
             </div>
-            <div className="pt-4">
+            {/* <div className="pt-4">
               <Button
                 size="lg"
                 variant="outline"
@@ -46,7 +46,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
                   <ChevronRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform"/>
                 </span>
               </Button>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative">
