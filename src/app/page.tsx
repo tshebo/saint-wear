@@ -1,5 +1,4 @@
 import { Montserrat, Bebas_Neue } from "next/font/google";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OurStory from "@/components/OurStory";
 import Featured from "@/components/Featured";
@@ -26,7 +25,6 @@ export default function Home() {
     <main className={`min-h-screen ${montserrat.className} cursor-none`}>
       <CustomCursor />
       <div className="bg-yellow-400">
-        <Navbar bebasNeue={bebasNeue} />
         <Hero bebasNeue={bebasNeue} />
       </div>
       <OurStory bebasNeue={bebasNeue} />
@@ -35,7 +33,6 @@ export default function Home() {
       <BusinessSolutions bebasNeue={bebasNeue} />
       <Contact bebasNeue={bebasNeue} />
       {/* <JoinTheMovement bebasNeue={bebasNeue} /> */}
-      <Footer bebasNeue={bebasNeue} />
     </main>
   );
 }

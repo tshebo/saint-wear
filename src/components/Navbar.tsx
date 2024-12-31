@@ -2,10 +2,13 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronRight } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   // Handle scroll effect
   useEffect(() => {
@@ -28,7 +31,12 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
     }
   }, [isMenuOpen])
 
-  const navItems = ['About', 'Collection', 'Lookbook', 'Business', 'Contact']
+  const navItems = [
+    { name: 'Collections', href: '/collections' },
+    { name: 'Lookbook', href: '/lookbook' },
+    { name: 'Business', href: '/business' },
+    { name: 'Contact', href: '/contact' }
+  ]
 
   return (
     <>
@@ -37,23 +45,29 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
       }`}>
         <div className="max-w-[2000px] mx-auto flex justify-between items-center py-4 sm:py-6 px-4 sm:px-8">
           {/* Logo */}
-          <div 
-            className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-black hover:text-blue-600 transition-colors cursor-pointer`}
+          <Link 
+            href="/"
+            className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-black hover:text-blue-600 transition-colors`}
           >
             SAINTWEAR
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-2 lg:space-x-6">
             {navItems.map((item) => (
-              <Button 
-                key={item}
-                variant="ghost" 
-                className="text-black hover:text-blue-600 transition-colors relative group"
-              >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"/>
-              </Button>
+              <Link key={item.name} href={item.href}>
+                <Button 
+                  variant="ghost" 
+                  className={`text-black transition-colors relative group ${
+                    pathname === item.href ? 'text-blue-600' : 'hover:text-blue-600'
+                  }`}
+                >
+                  {item.name}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${
+                    pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}/>
+                </Button>
+              </Link>
             ))}
           </div>
 
@@ -98,15 +112,18 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
           <div className="flex-1 overflow-y-auto py-6">
             <div className="space-y-2 px-4">
               {navItems.map((item) => (
-                <Button 
-                  key={item}
-                  variant="ghost" 
-                  className="w-full justify-between text-left text-lg hover:bg-blue-50 hover:text-blue-600 transition-all group"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <span>{item}</span>
-                  <ChevronRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform"/>
-                </Button>
+                <Link key={item.name} href={item.href}>
+                  <Button 
+                    variant="ghost" 
+                    className={`w-full justify-between text-left text-lg transition-all group ${
+                      pathname === item.href ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50 hover:text-blue-600'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span>{item.name}</span>
+                    <ChevronRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform"/>
+                  </Button>
+                </Link>
               ))}
             </div>
           </div>
