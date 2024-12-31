@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import { Bebas_Neue } from "next/font/google";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Saint Wear",
-  description: "Saint Wear Ecom Showcase",
-};
+import { Bebas_Neue } from "next/font/google";
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "Saint Wear",
+  description: "Saint Wear Ecom Showcase",
+};
+
 
 export default function RootLayout({
   children,
@@ -28,7 +29,7 @@ export default function RootLayout({
           <Navbar bebasNeue={bebasNeue} />
         </div>
         {children}
-      <Footer bebasNeue={bebasNeue} />
+        <Footer bebasNeue={bebasNeue} />
       </body>
     </html>
   );

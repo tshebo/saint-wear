@@ -1,3 +1,4 @@
+'use client'
 import { Montserrat, Bebas_Neue } from "next/font/google";
 import Hero from "@/components/Hero";
 import OurStory from "@/components/OurStory";
@@ -8,7 +9,7 @@ import Contact from "@/components/Contact";
 import JoinTheMovement from "@/components/JoinTheMovement";
 import Footer from "@/components/Footer";
 import CustomCursor from "@/components/CustomCursor";
-
+import { useEffect } from "react";
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -21,6 +22,25 @@ const bebasNeue = Bebas_Neue({
 });
 
 export default function Home() {
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section')
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top
+        const sectionBottom = section.getBoundingClientRect().bottom
+        if (sectionTop < window.innerHeight * 0.75 && sectionBottom > 0) {
+          section.classList.add('animate-fade-in')
+        }
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <main className={`min-h-screen ${montserrat.className} cursor-none`}>
       <CustomCursor />

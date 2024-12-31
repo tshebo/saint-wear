@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Briefcase } from 'lucide-react'
 
@@ -29,27 +30,31 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
               </p>
             </div>
 
-            {/* Buttons */}
+            {/* Buttons with Links */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button 
-                size="lg" 
-                className="bg-blue-600 text-white hover:bg-black transition-all duration-300 text-base sm:text-lg w-full sm:w-auto px-8 py-6 shadow-lg hover:shadow-xl group"
-              >
-                <span className="flex items-center justify-center">
-                  View Collections
-                  <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 text-base sm:text-lg w-full sm:w-auto px-8 py-6 group"
-              >
-                <span className="flex items-center justify-center">
-                  Business Solutions 
-                  <Briefcase className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" />
-                </span>
-              </Button>
+              <Link href="/collections" className="w-full sm:w-auto">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-600 text-white hover:bg-black transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
+                >
+                  <span className="flex items-center justify-center">
+                    View Collections
+                    <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </Link>
+              <Link href="/business" className="w-full sm:w-auto">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 group"
+                >
+                  <span className="flex items-center justify-center">
+                    Business Solutions 
+                    <Briefcase className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" />
+                  </span>
+                </Button>
+              </Link>
             </div>
           </div>
 

@@ -33,8 +33,8 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
 
   const navItems = [
     { name: 'Collections', href: '/collections' },
-    { name: 'Lookbook', href: '/lookbook' },
-    { name: 'Business', href: '/business' },
+    // { name: 'Lookbook', href: '/lookbook' },
+    { name: 'Business Solutions', href: '/business' },
     { name: 'Contact', href: '/contact' }
   ]
 

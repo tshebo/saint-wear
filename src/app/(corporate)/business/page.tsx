@@ -264,7 +264,7 @@ export default function CorporatePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-black hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
             >
               View Portfolio
             </Button>
