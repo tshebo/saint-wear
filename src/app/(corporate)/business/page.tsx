@@ -251,7 +251,7 @@ export default function CorporatePage() {
             READY TO GET STARTED?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto transform transition-all duration-1000">
-            Let's discuss how we can help elevate your brand with our corporate
+            Let&#39;s discuss how we can help elevate your brand with our corporate
             printing solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -264,7 +264,7 @@ export default function CorporatePage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+              className="border-white text-black hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               View Portfolio
             </Button>
