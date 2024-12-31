@@ -94,7 +94,7 @@ export default function Contact() {
           <div className="text-center relative">
             <div className="w-20 h-1 bg-black mb-8 mx-auto transform origin-left animate-scale-x"/>
             <h1 className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-black mb-6 tracking-tight animate-fade-in`}>
-              LET'S CONNECT
+              LET&#39;S CONNECT
             </h1>
             <p className="text-xl text-black/80 max-w-3xl mx-auto font-medium animate-fade-in-up">
               Have questions? We&#39;d love to hear from you. Send us a message and we&#39;ll get back to you shortly.
