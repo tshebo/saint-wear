@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { ChevronRight, Plus, ArrowRight, X, Eye } from "lucide-react";
+import { X, Eye } from "lucide-react";
 import { Bebas_Neue } from "next/font/google";
 
 const bebasNeue = Bebas_Neue({
@@ -185,55 +185,57 @@ export default function CollectionsPage() {
   return (
     <main className="min-h-screen pt-24">
       {/* Hero Section */}
-      <section 
-  className="relative overflow-hidden py-20 lg:py-32"
-  style={{
-    backgroundImage: "url('/hero.png')", // Replace with your image path
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
-  }}
->
-  {/* Add a dark overlay to ensure text readability */}
-  <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/90 to-yellow-500/90" />
-  
-  {/* Your existing dot pattern overlay */}
-  <div
-    className="absolute inset-0 opacity-10"
-    style={{
-      transform: `translateY(${scrollY * 0.2}px)`,
-    }}
-  >
-    <div
-      className="absolute inset-0"
-      style={{
-        backgroundImage:
-          "radial-gradient(circle at 2px 2px, black 1px, transparent 0)",
-        backgroundSize: "24px 24px",
-      }}
-    />
-  </div>
-
-  {/* Rest of your content remains the same */}
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative"> {/* Added relative here */}
-    <div className="text-center relative">
-      <div className="w-20 h-1 bg-black mb-8 mx-auto" />
-      <h1
-        className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-black mb-6 tracking-tight`}
+      <section
+        className="relative overflow-hidden py-20 lg:py-32"
+        style={{
+          backgroundImage: "url('/hero.png')", // Replace with your image path
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        OUR COLLECTIONS
-      </h1>
-      <p className="text-xl text-black/80 max-w-3xl mx-auto font-medium">
-        Discover our latest collections featuring premium quality
-        streetwear, athleisure, and business attire.
-      </p>
-    </div>
-  </div>
+        {/* Add a dark overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/90 to-yellow-500/90" />
 
-  {/* Decorative elements */}
-  <div className="absolute left-0 bottom-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
-  <div className="absolute right-0 top-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
-</section>
+        {/* Your existing dot pattern overlay */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            transform: `translateY(${scrollY * 0.2}px)`,
+          }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, black 1px, transparent 0)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+        </div>
+
+        {/* Rest of your content remains the same */}
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {" "}
+          {/* Added relative here */}
+          <div className="text-center relative">
+            <div className="w-20 h-1 bg-black mb-8 mx-auto" />
+            <h1
+              className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-black mb-6 tracking-tight`}
+            >
+              OUR COLLECTIONS
+            </h1>
+            <p className="text-xl text-black/80 max-w-3xl mx-auto font-medium">
+              Discover our latest collections featuring premium quality
+              streetwear, athleisure, and business attire.
+            </p>
+          </div>
+        </div>
+
+        {/* Decorative elements */}
+        <div className="absolute left-0 bottom-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
+        <div className="absolute right-0 top-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
+      </section>
 
       {/* Categories Section */}
       <section className="py-12 border-b backdrop-blur-sm sticky top-0 z-30 bg-white/80">
