@@ -15,7 +15,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
             </h3>
             <p className="text-lg">
               Redefining urban fashion with bold, vibrant styles for individuals
-              and businesses. From street to boardroom, we've got you covered.
+              and businesses. From street to boardroom, we&#39;ve got you covered.
             </p>
           </div>
           <div>
