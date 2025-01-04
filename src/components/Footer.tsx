@@ -1,4 +1,8 @@
-import { Instagram, Twitter, Facebook } from "lucide-react";
+import {
+  RiInstagramLine,
+  RiFacebookLine,
+  RiWhatsappLine,
+} from "@remixicon/react";
 
 export default function Footer({ bebasNeue }: { bebasNeue: any }) {
   return (
@@ -11,8 +15,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
             </h3>
             <p className="text-lg">
               Redefining urban fashion with bold, vibrant styles for individuals
-              and businesses. From street to boardroom, we&#39;ve got you
-              covered.
+              and businesses. From street to boardroom, we've got you covered.
             </p>
           </div>
           <div>
@@ -21,15 +24,17 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
             </h3>
             <ul className="space-y-4 text-lg">
               {[
-                // "About Us",
-                "Our Collections",
-                "Business Solutions",
-                // "Lookbook",
-                "Contact",
+                { name: "Home", href: "/" },
+                { name: "Our Collections", href: "/collections" },
+                { name: "Business Solutions", href: "/business" },
+                { name: "Contact", href: "/contact" },
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
-                    {item}
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -40,11 +45,26 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
               CONNECT
             </h3>
             <div className="flex space-x-6">
-              {[Instagram, Twitter, Facebook].map((Icon, index) => (
+              {[
+                {
+                  Icon: RiInstagramLine,
+                  href: "https://instagram.com/saintwear",
+                },
+                {
+                  Icon: RiFacebookLine,
+                  href: "https://facebook.com/saintwear",
+                },
+                {
+                  Icon: RiWhatsappLine,
+                  href: "https://wa.me/27662143840?text=Hello%2C%20I%20would%20like%20a%20quote%20",
+                },
+              ].map(({ Icon, href }) => (
                 <a
-                  key={index}
-                  href="#"
+                  key={href}
+                  href={href}
                   className="hover:text-blue-600 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Icon className="h-8 w-8" />
                 </a>

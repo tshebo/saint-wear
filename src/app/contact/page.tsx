@@ -38,20 +38,20 @@ export default function Contact() {
   const contactInfo = [
     { 
       icon: Phone, 
-      text: "+1 (555) 123-4567", 
-      href: "tel:+15551234567",
+      text: "+27(0) 78 070 0179", 
+      href: "tel:+27780700179",
       label: "Call us"
     },
     { 
       icon: Mail, 
-      text: "info@saintwear.com", 
-      href: "mailto:info@saintwear.com",
+      text: "sales@saintwaer.co.za", 
+      href: "mailto:sales@saintwaer.co.za",
       label: "Email us"
     },
     { 
       icon: MapPin, 
-      text: "123 Fashion Street, Style City, ST 12345", 
-      href: "https://maps.google.com/?q=123+Fashion+Street,+Style+City,+ST+12345",
+      text: "2 Risana Avenue, Unit 68 Bolderview, Risana, Johnannesburg, 2197", 
+      href: "https://maps.app.goo.gl/biuDyZcwNyBLrAS46",
       label: "Visit us"
     },
     { 

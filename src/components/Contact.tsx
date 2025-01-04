@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,17 +28,17 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
   const contactInfo: ContactInfo[] = [
     {
       icon: <Phone className="h-6 w-6" />,
-      text: "+1 (555) 123-4567",
+      text: "+27(0) 78 070 0179",
     },
     {
       icon: <Mail className="h-6 w-6" />,
-      text: "info@saintwear.com",
-      link: "mailto:info@saintwear.com",
+      text: "sales@saintwaer.co.za",
+      link: "mailto:sales@saintwaer.co.za",
       hover: true,
     },
     {
       icon: <MapPin className="h-6 w-6" />,
-      text: "123 Fashion Street, Style City, ST 12345",
+      text: "2 Risana Avenue, Unit 68 Bolderview, Risana, Johnannesburg, 2197",
     },
   ];
 
@@ -80,8 +80,19 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
       </div>
 
       <div className="max-w-[2000px] mx-auto relative">
-        {/* Section Header */}
-        <div className="mb-12 lg:mb-16">
+        <div className="mb-12 lg:mb-16 relative">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 -z-10"
+            style={{
+              backgroundImage: "url('/hero.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              filter: "brightness(0.5)",
+            }}
+          />
+
           <div className="w-20 h-1 bg-white opacity-50 mb-6" />
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none`}
@@ -97,8 +108,8 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
           <div className="space-y-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 space-y-8">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                Have a question or want to collaborate? Reach out to us. We&apos;d
-                love to hear from you!
+                Have a question or want to collaborate? Reach out to us.
+                We&apos;d love to hear from you!
               </p>
 
               <div className="space-y-6">
@@ -158,7 +169,9 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
                   <h3 className="text-white text-xl font-semibold">
                     Message Sent!
                   </h3>
-                  <p className="text-white/70">We&apos;ll get back to you soon.</p>
+                  <p className="text-white/70">
+                    We&apos;ll get back to you soon.
+                  </p>
                   <Button
                     onClick={() => setIsSubmitted(false)}
                     className="mt-4 bg-yellow-400 text-black hover:bg-white hover:text-blue-600 transition-all duration-300"
