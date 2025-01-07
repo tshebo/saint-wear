@@ -56,7 +56,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
                 },
                 {
                   Icon: RiWhatsappLine,
-                  href: "https://wa.me/27662143840?text=Hello%2C%20I%20would%20like%20a%20quote%20",
+                  href: "https://wa.me/27662143840?text=Hello%2C%20I%20would%20like%20a%20quote%20!",
                 },
               ].map(({ Icon, href }) => (
                 <a
