@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Mail, MapPin, Instagram, Twitter, Facebook, Linkedin, Send, Clock, CheckCircle, ArrowRight } from 'lucide-react'
 import { Bebas_Neue } from "next/font/google";
+import { RiFacebookCircleFill, RiInstagramFill, RiWhatsappFill } from '@remixicon/react'
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -63,10 +64,10 @@ export default function Contact() {
   ]
 
   const socialMedia = [
-    { icon: Instagram, link: "https://instagram.com/saintwear", label: "Instagram" },
-    { icon: Twitter, link: "https://twitter.com/saintwear", label: "Twitter" },
-    { icon: Facebook, link: "https://facebook.com/saintwear", label: "Facebook" },
-    { icon: Linkedin, link: "https://linkedin.com/saintwear", label: "LinkedIn" }
+    { icon: RiInstagramFill, link: "https://instagram.com/saintwear", label: "Instagram" },
+    { icon: RiFacebookCircleFill, link: "https://facebook.com/saintwear", label: "Facebook" },
+    { icon: RiWhatsappFill, link: "https://wa.me/27662143840?text=Hello, I have a business query!", label: "WhatsApp" },
+
   ]
 
   return (

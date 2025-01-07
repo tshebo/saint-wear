@@ -262,7 +262,7 @@ export default function PortfolioPage() {
             >
               <Link
                 target="_blank"
-                href="https://wa.me/27662143840?text=Hi, i would like a quote!"
+                href="https://wa.me/27662143840?text=Hello%2C%20I%20would%20like%20a%20quote%20!"
               >
                 Request a Quote
               </Link>
