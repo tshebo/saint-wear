@@ -252,7 +252,7 @@ export default function PortfolioPage() {
             READY TO START YOUR PROJECT?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can bring your corporate printing vision to
+            Let&#39;ds discuss how we can bring your corporate printing vision to
             life. Our team is ready to deliver exceptional quality and service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

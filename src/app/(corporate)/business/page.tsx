@@ -144,9 +144,9 @@ export default function CorporatePage() {
                     size="lg"
                     className=" bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105 group"
                   >
-                    <Link href="/">
+                    <Link href="https://api.whatsapp.com/send/?phone=27662143840&text=Hello%2C+I+have+a+business+query%21&type=phone_number&app_absent=0">
                       <span className="flex items-center">
-                        Get Started
+                        Contact Us
                         <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                       </span>
                     </Link>
