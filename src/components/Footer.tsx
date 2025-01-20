@@ -32,7 +32,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-yellow-400 transition-colors"
                   >
                     {item.name}
                   </a>
@@ -62,7 +62,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
                 <a
                   key={href}
                   href={href}
-                  className="hover:text-blue-600 transition-colors"
+                  className="hover:text-yellow-400 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

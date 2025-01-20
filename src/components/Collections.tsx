@@ -103,7 +103,7 @@ function Modal({
               </div>
 
               {/* <div className="mt-8">
-                <Button className="w-full bg-yellow-400 text-black hover:bg-blue-600 hover:text-white transition-colors group">
+                <Button className="w-full bg-yellow-400 text-black hover:bg-slate-900 hover:text-white transition-colors group">
                   View Full Details
                   <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -233,8 +233,8 @@ export default function CollectionsPage() {
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute left-0 bottom-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
-        <div className="absolute right-0 top-0 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl" />
+        <div className="absolute left-0 bottom-0 w-40 h-40 bg-slate-900/10 rounded-full blur-3xl" />
+        <div className="absolute right-0 top-0 w-40 h-40 bg-slate-900/10 rounded-full blur-3xl" />
       </section>
 
       {/* Categories Section */}

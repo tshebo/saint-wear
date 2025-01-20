@@ -244,7 +244,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      <section className="bg-blue-600 py-20">
+      <section className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             className={`${bebasNeue.className} text-4xl lg:text-5xl font-bold text-white mb-6`}
@@ -252,8 +252,9 @@ export default function PortfolioPage() {
             READY TO START YOUR PROJECT?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let&#39;ds discuss how we can bring your corporate printing vision to
-            life. Our team is ready to deliver exceptional quality and service.
+            Let&#39;ds discuss how we can bring your corporate printing vision
+            to life. Our team is ready to deliver exceptional quality and
+            service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

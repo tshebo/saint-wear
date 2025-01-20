@@ -102,7 +102,7 @@ export default function CorporatePage() {
   return (
     <main className="relative scroll-smooth">
       {/* Hero Section with Parallax */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 py-24 lg:py-32 relative overflow-hidden">
         <FadeInSection>
           <div className="absolute inset-0 opacity-10">
             <div
@@ -123,9 +123,9 @@ export default function CorporatePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8 transform transition-all duration-1000 ease-out translate-y-0 opacity-100">
                 <div>
-                  <div className="w-20 h-1 bg-white mb-8 transform origin-left transition-all duration-1000 ease-out scale-x-100" />
+                  <div className="w-20 h-1 bg-black mb-8 transform origin-left transition-all duration-1000 ease-out scale-x-100" />
                   <h1
-                    className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-none mb-6 opacity-0 animate-fadeIn`}
+                    className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-7xl font-bold text-black leading-none mb-6 opacity-0 animate-fadeIn`}
                   >
                     CORPORATE
                     <br />
@@ -133,7 +133,7 @@ export default function CorporatePage() {
                     <br />
                     SOLUTIONS
                   </h1>
-                  <p className="text-xl text-white/90 transform transition-all duration-1000 delay-300 translate-y-0 opacity-100">
+                  <p className="text-xl text-black/90 transform transition-all duration-1000 delay-300 translate-y-0 opacity-100">
                     Premium custom printing services for businesses. From
                     uniforms to promotional materials, we deliver quality at
                     scale.
@@ -142,7 +142,7 @@ export default function CorporatePage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button
                     size="lg"
-                    className=" bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105 group"
+                    className=" bg-black text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 group"
                   >
                     <Link href="https://api.whatsapp.com/send/?phone=27662143840&text=Hello%2C+I+have+a+business+query%21&type=phone_number&app_absent=0">
                       <span className="flex items-center">
@@ -153,15 +153,15 @@ export default function CorporatePage() {
                   </Button>
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105 group"
+                    variant="default"
+                    className="bg-black text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 group"
                   >
                     <Link href="/portfolio">View Catalog</Link>
                   </Button>
                 </div>
               </div>
               <div className="relative transform transition-all duration-1000 hover:scale-105 animate-float">
-                <div className="absolute inset-0 bg-white/10 transform rotate-6 rounded-3xl transition-all duration-500 hover:rotate-3" />
+                <div className="absolute inset-0 bg-black/70 transform rotate-6 rounded-3xl transition-all duration-500 hover:rotate-3" />
                 <Image
                   src="/hero.png"
                   alt="Corporate Printing Solutions"
@@ -230,11 +230,11 @@ export default function CorporatePage() {
                 <div
                   key={index}
                   className={`bg-white p-6 rounded-lg shadow-lg transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2
-                  ${activeService === index ? "ring-2 ring-blue-500" : ""}`}
+                  ${activeService === index ? "ring-2 ring-yellow-500" : ""}`}
                   onMouseEnter={() => setActiveService(index)}
                   onMouseLeave={() => setActiveService(null)}
                 >
-                  <div className="text-blue-600 mb-4 transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+                  <div className="text-yellow-400 mb-4 transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 transition-colors duration-300 group-hover:text-blue-600">
@@ -273,24 +273,24 @@ export default function CorporatePage() {
                 <div className="space-y-6">
                   {[
                     {
-                      icon: <CheckCircle2 className="h-6 w-6 text-blue-600" />,
+                      icon: <CheckCircle2 className="h-6 w-6 " />,
                       title: "Premium Quality",
                       description:
                         "Industry-leading printing technology and materials",
                     },
                     {
-                      icon: <Clock className="h-6 w-6 text-blue-600" />,
+                      icon: <Clock className="h-6 w-6 " />,
                       title: "Fast Turnaround",
                       description:
                         "Quick delivery without compromising quality",
                     },
                     {
-                      icon: <Users className="h-6 w-6 text-blue-600" />,
+                      icon: <Users className="h-6 w-6 " />,
                       title: "Dedicated Support",
                       description: "Personal account manager for your business",
                     },
                     {
-                      icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
+                      icon: <TrendingUp className="h-6 w-6 " />,
                       title: "Bulk Pricing",
                       description: "Competitive rates for large orders",
                     },
@@ -299,11 +299,11 @@ export default function CorporatePage() {
                       key={index}
                       className="flex items-start space-x-4 transform transition-all duration-500 hover:translate-x-2"
                     >
-                      <div className="transform transition-all duration-300 hover:scale-110 hover:rotate-6 animate-pulse">
+                      <div className="transform transition-all duration-300 text-yellow-400 hover:scale-110 hover:rotate-6 animate-pulse">
                         {benefit.icon}
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1 transition-colors duration-300 hover:text-blue-600">
+                        <h3 className="font-semibold mb-1 transition-colors duration-300 hover:text-yellow-600">
                           {benefit.title}
                         </h3>
                         <p className="text-gray-600 transition-colors duration-300 hover:text-gray-900">
@@ -350,9 +350,9 @@ export default function CorporatePage() {
                       {item.question}
                     </span>
                     {activeFAQ === index ? (
-                      <ChevronUp className="h-5 w-5 text-blue-600 transition-transform duration-300" />
+                      <ChevronUp className="h-5 w-5 text-yellow-600 transition-transform duration-300" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-blue-600 transition-transform duration-300" />
+                      <ChevronDown className="h-5 w-5 text-yellow-600 transition-transform duration-300" />
                     )}
                   </button>
                   <div
@@ -372,7 +372,7 @@ export default function CorporatePage() {
       </section>
 
       {/* CTA Section with Hover Animations */}
-      <section className="bg-blue-600 py-20 transform transition-all duration-1000">
+      <section className="bg-slate-900 py-20 transform transition-all duration-1000">
         <FadeInSection>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2
@@ -387,14 +387,14 @@ export default function CorporatePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-black hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="">Request Quote</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-white text-blue-600 hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-black hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
                 <Link href="/portfolio">View Catalog</Link>
               </Button>

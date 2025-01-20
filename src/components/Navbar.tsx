@@ -52,7 +52,7 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
           {/* Logo */}
           <Link
             href="/"
-            className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-black hover:text-blue-600 transition-colors`}
+            className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-black hover:text-slate-600 transition-colors`}
           >
             SAINTWEAR
           </Link>
@@ -65,13 +65,13 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
                   variant="ghost"
                   className={`text-black transition-colors relative group ${
                     pathname === item.href
-                      ? "text-blue-600"
-                      : "hover:text-blue-600"
+                      ? "text-slate-900"
+                      : "hover:text-slate-600"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-blue-600 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-slate-900 transition-all duration-300 ${
                       pathname === item.href
                         ? "w-full"
                         : "w-0 group-hover:w-full"
@@ -129,8 +129,8 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
                     variant="ghost"
                     className={`w-full justify-between text-left text-lg transition-all group ${
                       pathname === item.href
-                        ? "bg-blue-50 text-blue-600"
-                        : "hover:bg-blue-50 hover:text-blue-600"
+                        ? "bg-yellow-50 text-slate-900"
+                        : "hover:bg-yellow-50 hover:text-slate-600"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -145,7 +145,7 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
           {/* Mobile Menu Footer */}
           <div className="p-6 border-t mt-auto">
             <Button
-              className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              className="w-full bg-slate-900 text-white hover:bg-yellow-700 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Close Menu
