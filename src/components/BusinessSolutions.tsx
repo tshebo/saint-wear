@@ -136,7 +136,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
               <div className="relative rounded-lg overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent mix-blend-overlay" />
                 <Image
-                  src="/hero.png"
+                  src="/logo-black.png"
                   alt="Saintwear Custom Printing Facility"
                   width={800}
                   height={600}

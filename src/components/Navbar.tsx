@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,11 +51,14 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
       >
         <div className="max-w-[2000px] mx-auto flex justify-between items-center py-4 sm:py-6 px-4 sm:px-8">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-black hover:text-slate-600 transition-colors`}
-          >
-            SAINTWEAR
+          <Link href="/">
+            <Image
+              src="/logo-black.png" // Replace with your logo image path
+              alt="Logo"
+              width={60} // Adjust width as needed
+              height={50} // Adjust height as needed
+              className="object-cover mb-4"
+            />
           </Link>
 
           {/* Desktop Navigation */}

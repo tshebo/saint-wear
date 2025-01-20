@@ -163,7 +163,7 @@ export default function CorporatePage() {
               <div className="relative transform transition-all duration-1000 hover:scale-105 animate-float">
                 <div className="absolute inset-0 bg-black/70 transform rotate-6 rounded-3xl transition-all duration-500 hover:rotate-3" />
                 <Image
-                  src="/hero.png"
+                  src="/logo-black.png"
                   alt="Corporate Printing Solutions"
                   width={800}
                   height={600}
@@ -257,7 +257,7 @@ export default function CorporatePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="transform transition-all duration-1000 hover:scale-105">
                 <Image
-                  src="/hero.png"
+                  src="/logo-black.png"
                   alt="Corporate Printing Process"
                   width={600}
                   height={400}
