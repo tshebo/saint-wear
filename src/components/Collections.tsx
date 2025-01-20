@@ -188,7 +188,7 @@ export default function CollectionsPage() {
       <section
         className="relative overflow-hidden py-20 lg:py-32"
         style={{
-          backgroundImage: "url('/hero.png')", // Replace with your image path
+          backgroundImage: "url('/sw (30).webp')", // Replace with your image path
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -251,7 +251,7 @@ export default function CollectionsPage() {
                   ${
                     activeCategory === category
                       ? "bg-yellow-400 text-black hover:bg-yellow-500"
-                      : "text-blue-600 hover:text-yellow-600 border-blue-600 hover:border-yellow-400"
+                      : "text-black hover:text-yellow-600 border-black hover:border-yellow-400"
                   }
                 `}
               >
@@ -300,12 +300,12 @@ export default function CollectionsPage() {
                   <div className="p-6">
                     <div className="flex items-center justify-between">
                       <h3
-                        className={`${bebasNeue.className} text-xl group-hover:text-blue-600 transition-colors`}
+                        className={`${bebasNeue.className} text-xl group-hover:text-yellow-400 transition-colors`}
                       >
                         {item.name}
                       </h3>
                     </div>
-                    <div className="text-sm font-medium text-blue-600/80 mt-2 tracking-wide uppercase">
+                    <div className="text-sm font-medium text-yellow-600/80 mt-2 tracking-wide uppercase">
                       {item.category}
                     </div>
                   </div>

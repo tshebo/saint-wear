@@ -15,32 +15,26 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
   const styles: StyleItem[] = [
     {
       title: "Street Style",
-      description: "Urban-inspired casual wear with attitude",
-      image: "/hero.png",
+      description: "Urban-inspired casual wear",
+      image: "/sw (20).webp",
       alt: "Model wearing street style fashion",
       accent: "blue",
     },
     {
-      title: "Urban Chic",
-      description: "Sophisticated city fashion that stands out",
-      image: "/hero.png",
+      title: "Casual and Relaxed",
+      description: "Sophisticated casual fashion that stands out",
+      image: "/sw (16).webp",
       alt: "Urban chic fashion showcase",
       accent: "purple",
     },
     {
       title: "Bold Patterns",
       description: "Eye-catching designs that make a statement",
-      image: "/hero.png",
+      image: "/sw (45).webp",
       alt: "Bold pattern fashion display",
       accent: "yellow",
     },
-    {
-      title: "Corporate Edge",
-      description: "Professional wear with modern flair",
-      image: "/hero.png",
-      alt: "Professional attire with edge",
-      accent: "red",
-    },
+  
   ];
 
   const accentColors: Record<AccentColor, string> = {
@@ -78,7 +72,7 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
         </div>
 
         {/* Styles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {styles.map((style, index) => (
             <div key={index} className="group cursor-pointer">
               {/* Image Container */}

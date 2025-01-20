@@ -280,10 +280,10 @@ export default function Contact() {
                       <a
                         key={index}
                         href={href}
-                        className="flex items-center space-x-4 text-gray-600 hover:text-blue-600 transition-all duration-300 group/item relative z-10"
+                        className="flex items-center space-x-4 text-gray-600 hover:text-yellow-400 transition-all duration-300 group/item relative z-10"
                       >
                         <div className="bg-yellow-100 p-3 rounded-full group-hover/item:bg-yellow-200 transition-all duration-300 transform group-hover/item:scale-110">
-                          <Icon className="h-6 w-6 text-blue-600" />
+                          <Icon className="h-6 w-6 text-black" />
                         </div>
                         <div className="flex flex-col">
                           <span className="text-sm font-medium text-yellow-500">
@@ -301,7 +301,7 @@ export default function Contact() {
                 <CardContent className="p-8 relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <h3
-                    className={`${bebasNeue.className} text-2xl font-bold text-blue-600 mb-6 relative z-10`}
+                    className={`${bebasNeue.className} text-2xl font-bold text-black mb-6 relative z-10`}
                   >
                     Connect With Us
                   </h3>
@@ -316,7 +316,7 @@ export default function Contact() {
                         aria-label={label}
                       >
                         <div className="bg-yellow-100 p-4 rounded-full hover:bg-yellow-200 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg">
-                          <Icon className="h-6 w-6 text-blue-600 transform group-hover:scale-110 transition-transform" />
+                          <Icon className="h-6 w-6 text-black transform group-hover:scale-110 transition-transform" />
                         </div>
                       </a>
                     ))}

@@ -64,7 +64,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
               {/* Image */}
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/hero.png?height=600&width=800"
+                  src="/sw (17).webp?height=600&width=800"
                   alt="Saintwear Design Process"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"

@@ -7,6 +7,7 @@ import WearTheAttitude from "@/components/WearTheAttitude";
 import BusinessSolutions from "@/components/BusinessSolutions";
 import Contact from "@/components/Contact";
 import { useEffect } from "react";
+import CustomCursor from "@/components/CustomCursor";
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
@@ -39,7 +40,8 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={`min-h-screen ${montserrat.className} cursor-none`}>
+    <main className={`min-h-screen ${montserrat.className} `}>
+      {/* <CustomCursor/> */}
       <div className="bg-yellow-400">
         <Hero bebasNeue={bebasNeue} />
       </div>

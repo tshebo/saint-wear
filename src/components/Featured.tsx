@@ -4,25 +4,25 @@ import { ArrowRight } from "lucide-react";
 export default function Featured({ bebasNeue }: { bebasNeue: any }) {
   const collections = [
     {
-      title: "Urban Pulse Collection",
+      title: "Elevated",
       description: "Bold. Daring. Unforgettable.",
       tags: ["New Season", "Trending"],
-      image: "/hero.png",
+      image: "/sw (34).webp",
       alt: "Model wearing urban streetwear against city backdrop",
     },
     {
-      title: "Street Dreams Series",
+      title: "Layered",
       description: "Bold. Daring. Unforgettable.",
       tags: ["Limited Edition", "Best Seller"],
-      image: "/hero.png",
+      image: "/sw (15).webp",
       alt: "Street style fashion showcase in urban setting",
     },
     {
-      title: "Bold Statement Line",
+      title: "Urban",
       description: "Bold. Daring. Unforgettable.",
       tags: ["Premium", "Exclusive"],
-      image: "/hero.png",
-      alt: "Contemporary fashion with bold patterns and colors",
+      image: "/sw (26).webp",
+      alt: "Urban fashion with bold patterns and colors",
     },
   ];
 

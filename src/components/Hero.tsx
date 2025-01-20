@@ -77,16 +77,16 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
               <div className="absolute inset-0 bg-slate-900 transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500 rounded-lg" />
 
               {/* Main Image Container */}
-              <div className="relative z-10 aspect-square max-w-2xl mx-auto overflow-hidden rounded-lg shadow-xl group">
+              <div className="relative z-10 aspect-square max-w-3xl mx-auto overflow-hidden rounded-lg shadow-xl group">
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-blue-900/0 transition-colors duration-500 z-10" />
 
                 {/* Image */}
                 <Image
-                  src="/hero.png?height=800&width=800"
+                  src="/sw (1).webp"
                   alt="Saintwear Showcase"
                   fill
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                 />
 
                 {/* Border Decoration */}
