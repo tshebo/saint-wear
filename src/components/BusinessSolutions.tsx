@@ -127,7 +127,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
           </div>
 
           {/* Image Section */}
-          <div className="relative">
+          <div className="relative bg-white rounded-md">
             <div className="relative overflow-hidden rounded-lg shadow-2xl group">
               {/* Background Shape */}
               <div className="absolute inset-0 bg-yellow-400/20 transform -rotate-3 scale-105" />

@@ -1,3 +1,4 @@
+
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -116,10 +117,13 @@ function Modal({
   );
 }
 
+const ITEMS_PER_PAGE = 20; // Number of items to display per page
+
 export default function CollectionsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [scrollY, setScrollY] = useState(0);
   const [selectedItem, setSelectedItem] = useState<Collection | null>(null);
+  const [currentPage, setCurrentPage] = useState(1); // New state for current page
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -145,35 +149,290 @@ export default function CollectionsPage() {
     },
     {
       id: 2,
-      name: "Tech Performance Jacket",
-      category: "Athleisure",
-      image: "/logo-black.png",
+      name: "Urban Classic Hoodie",
+      category: "Streetwear",
+      image: "/sw (1).webp",
       isNew: true,
     },
     {
       id: 3,
-      name: "Business Casual Polo",
-      category: "Business",
-      image: "/logo-black.png",
+      name: "Collection 1",
+      category: "Streetwear",
+      image: "/sw (2).webp",
+      isNew: true,
     },
     {
       id: 4,
-      name: "Street Art Tee",
+      name: "Collection 2",
       category: "Streetwear",
-      image: "/logo-black.png",
+      image: "/sw (3).webp",
+      isNew: true,
     },
     {
       id: 5,
-      name: "Sport Performance Tee",
-      category: "Athleisure",
-      image: "/logo-black.png",
+      name: "Collection 3",
+      category: "Streetwear",
+      image: "/sw (4).webp",
       isNew: true,
     },
     {
       id: 6,
-      name: "Modern Fit Blazer",
-      category: "Business",
-      image: "/logo-black.png",
+      name: "Collection 4",
+      category: "Streetwear",
+      image: "/sw (5).webp",
+      isNew: true,
+    },
+    {
+      id: 7,
+      name: "Collection 5",
+      category: "Streetwear",
+      image: "/sw (6).webp",
+      isNew: true,
+    },
+    {
+      id: 8,
+      name: "Collection 6",
+      category: "Streetwear",
+      image: "/sw (7).webp",
+      isNew: true,
+    },
+    {
+      id: 9,
+      name: "Collection 7",
+      category: "Streetwear",
+      image: "/sw (8).webp",
+      isNew: true,
+    },
+    {
+      id: 10,
+      name: "Collection 8",
+      category: "Streetwear",
+      image: "/sw (9).webp",
+      isNew: true,
+    },
+    {
+      id: 11,
+      name: "Collection 9",
+      category: "Streetwear",
+      image: "/sw (10).webp",
+      isNew: true,
+    },
+    {
+      id: 12,
+      name: "Collection 10",
+      category: "Streetwear",
+      image: "/sw (11).webp",
+      isNew: true,
+    },
+    {
+      id: 13,
+      name: "Collection 11",
+      category: "Streetwear",
+      image: "/sw (12).webp",
+      isNew: true,
+    },
+    {
+      id: 14,
+      name: "Collection 12",
+      category: "Streetwear",
+      image: "/sw (13).webp",
+      isNew: true,
+    },
+    {
+      id: 15,
+      name: "Collection 13",
+      category: "Streetwear",
+      image: "/sw (14).webp",
+      isNew: true,
+    },
+    {
+      id: 16,
+      name: "Collection 14",
+      category: "Streetwear",
+      image: "/sw (15).webp",
+      isNew: true,
+    },
+    {
+      id: 17,
+      name: "Collection 15",
+      category: "Streetwear",
+      image: "/sw (16).webp",
+      isNew: true,
+    },
+    {
+      id: 18,
+      name: "Collection 16",
+      category: "Streetwear",
+      image: "/sw (17).webp",
+      isNew: true,
+    },
+    {
+      id: 19,
+      name: "Collection 17",
+      category: "Streetwear",
+      image: "/sw (18).webp",
+      isNew: true,
+    },
+    {
+      id: 20,
+      name: "Collection 18",
+      category: "Streetwear",
+      image: "/sw (19).webp",
+      isNew: true,
+    },
+    {
+      id: 21,
+      name: "Collection 19",
+      category: "Streetwear",
+      image: "/sw (20).webp",
+      isNew: true,
+    },
+    {
+      id: 22,
+      name: "Collection 20",
+      category: "Streetwear",
+      image: "/sw (21).webp",
+      isNew: true,
+    },
+    {
+      id: 23,
+      name: "Collection 21",
+      category: "Streetwear",
+      image: "/sw (22).webp",
+      isNew: true,
+    },
+    {
+      id: 24,
+      name: "Collection 22",
+      category: "Streetwear",
+      image: "/sw (23).webp",
+      isNew: true,
+    },
+    {
+      id: 25,
+      name: "Collection 23",
+      category: "Streetwear",
+      image: "/sw (24).webp",
+      isNew: true,
+    },
+    {
+      id: 26,
+      name: "Collection 24",
+      category: "Streetwear",
+      image: "/sw (25).webp",
+      isNew: true,
+    },
+    {
+      id: 27,
+      name: "Collection 25",
+      category: "Streetwear",
+      image: "/sw (26).webp",
+      isNew: true,
+    },
+    {
+      id: 28,
+      name: "Collection 26",
+      category: "Streetwear",
+      image: "/sw (27).webp",
+      isNew: true,
+    },
+    {
+      id: 29,
+      name: "Collection 27",
+      category: "Streetwear",
+      image: "/sw (28).webp",
+      isNew: true,
+    },
+    {
+      id: 30,
+      name: "Collection 28",
+      category: "Streetwear",
+      image: "/sw (29).webp",
+      isNew: true,
+    },
+    {
+      id: 31,
+      name: "Collection 29",
+      category: "Streetwear",
+      image: "/sw (30).webp",
+      isNew: true,
+    },
+    {
+      id: 32,
+      name: "Collection 30",
+      category: "Streetwear",
+      image: "/sw (31).webp",
+      isNew: true,
+    },
+    {
+      id: 33,
+      name: "Collection 31",
+      category: "Streetwear",
+      image: "/sw (32).webp",
+      isNew: true,
+    },
+    {
+      id: 34,
+      name: "Collection 32",
+      category: "Streetwear",
+      image: "/sw (33).webp",
+      isNew: true,
+    },
+    {
+      id: 35,
+      name: "Collection 33",
+      category: "Streetwear",
+      image: "/sw (34).webp",
+      isNew: true,
+    },
+    {
+      id: 36,
+      name: "Collection 34",
+      category: "Streetwear",
+      image: "/sw (35).webp",
+      isNew: true,
+    },
+    {
+      id: 37,
+      name: "Collection 35",
+      category: "Streetwear",
+      image: "/sw (36).webp",
+      isNew: true,
+    },
+    {
+      id: 38,
+      name: "Collection 36",
+      category: "Streetwear",
+      image: "/sw (37).webp",
+      isNew: true,
+    },
+    {
+      id: 39,
+      name: "Collection 37",
+      category: "Streetwear",
+      image: "/sw (38).webp",
+      isNew: true,
+    },
+    {
+      id: 40,
+      name: "Collection 38",
+      category: "Streetwear",
+      image: "/sw (39).webp",
+      isNew: true,
+    },
+    {
+      id: 41,
+      name: "Collection 39",
+      category: "Streetwear",
+      image: "/sw (40).webp",
+      isNew: true,
+    },
+    {
+      id: 42,
+      name: "Collection 40",
+      category: "Streetwear",
+      image: "/sw (41).webp",
+      isNew: true,
     },
   ];
 
@@ -181,6 +440,15 @@ export default function CollectionsPage() {
     activeCategory === "All"
       ? collections
       : collections.filter((item) => item.category === activeCategory);
+
+  // Calculate the total number of pages
+  const totalPages = Math.ceil(filteredCollections.length / ITEMS_PER_PAGE);
+
+  // Calculate the collections to display for the current page
+  const displayedCollections = filteredCollections.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
 
   return (
     <main className="min-h-screen pt-24">
@@ -269,7 +537,7 @@ export default function CollectionsPage() {
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCollections.map((item) => (
+            {displayedCollections.map((item) => (
               <div key={item.id} className="group relative">
                 <div
                   className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 cursor-pointer"
@@ -315,6 +583,31 @@ export default function CollectionsPage() {
           </div>
         </div>
       </section>
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center py-4">
+        <Button
+          onClick={() => {
+            setCurrentPage((prev) => Math.max(prev - 1, 1));
+            window.scrollTo(0, 0); // Scroll to the top of the page
+          }}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </Button>
+        <span className="mx-4">
+          Page {currentPage} of {totalPages}
+        </span>
+        <Button
+          onClick={() => {
+            setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+            window.scrollTo(0, 0); // Scroll to the top of the page
+          }}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </Button>
+      </div>
 
       {/* Modal */}
       {selectedItem && (

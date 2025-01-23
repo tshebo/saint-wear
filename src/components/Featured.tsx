@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Featured({ bebasNeue }: { bebasNeue: any }) {
   const collections = [
@@ -64,18 +66,19 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
               <div className="relative overflow-hidden rounded-lg mb-6">
                 {/* Background Shape */}
                 <div className="absolute inset-0 bg-slate-900 transform group-hover:scale-95 transition-transform duration-500 rounded-lg" />
-
-                {/* Image Wrapper */}
-                <div className="relative z-10 aspect-[3/4] transform group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-700"
-                  />
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
-                </div>
+                <Link href="/collections">
+                  {/* Image Wrapper */}
+                  <div className="relative z-10 aspect-[3/4] transform group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      fill
+                      className="object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
+                  </div>
+                </Link>
               </div>
 
               {/* Content */}
