@@ -1,4 +1,3 @@
-
 "use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -123,13 +122,35 @@ export default function CollectionsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
   const [scrollY, setScrollY] = useState(0);
   const [selectedItem, setSelectedItem] = useState<Collection | null>(null);
-  const [currentPage, setCurrentPage] = useState(1); // New state for current page
+  const [currentPage, setCurrentPage] = useState(1);
+  const [showCategories, setShowCategories] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show/hide categories based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        setShowCategories(false);
+      } else if (currentScrollY < lastScrollY) {
+        setShowCategories(true);
+      }
+
+      setLastScrollY(currentScrollY);
+      setScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const categories = [
     "All",
@@ -450,6 +471,11 @@ export default function CollectionsPage() {
     currentPage * ITEMS_PER_PAGE
   );
 
+  const handlePageChange = (newPage: number) => {
+    setCurrentPage(newPage);
+    scrollToTop();
+  };
+
   return (
     <main className="min-h-screen pt-24">
       {/* Hero Section */}
@@ -506,7 +532,11 @@ export default function CollectionsPage() {
       </section>
 
       {/* Categories Section */}
-      <section className="py-12 border-b backdrop-blur-sm sticky top-0 z-30 bg-white/80">
+      <section
+        className={`py-12 border-b backdrop-blur-sm sticky top-0 z-30 bg-white/80 transition-all duration-300 ${
+          showCategories ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
@@ -585,12 +615,10 @@ export default function CollectionsPage() {
       </section>
 
       {/* Pagination Controls */}
+
       <div className="flex justify-center py-4">
         <Button
-          onClick={() => {
-            setCurrentPage((prev) => Math.max(prev - 1, 1));
-            window.scrollTo(0, 0); // Scroll to the top of the page
-          }}
+          onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
         >
           Previous
@@ -599,10 +627,9 @@ export default function CollectionsPage() {
           Page {currentPage} of {totalPages}
         </span>
         <Button
-          onClick={() => {
-            setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-            window.scrollTo(0, 0); // Scroll to the top of the page
-          }}
+          onClick={() =>
+            handlePageChange(Math.min(currentPage + 1, totalPages))
+          }
           disabled={currentPage === totalPages}
         >
           Next
