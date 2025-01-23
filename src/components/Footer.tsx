@@ -48,7 +48,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
               {[
                 {
                   Icon: RiInstagramLine,
-                  href: "https://instagram.com/saintwear",
+                  href: "https://instagram.com/saintwearsa",
                 },
                 {
                   Icon: RiFacebookLine,
