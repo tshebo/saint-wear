@@ -52,7 +52,7 @@ export default function Footer({ bebasNeue }: { bebasNeue: any }) {
                 },
                 {
                   Icon: RiFacebookLine,
-                  href: "https://facebook.com/saintwear",
+                  href: "https://facebook.com/saintwearsa",
                 },
                 {
                   Icon: RiWhatsappLine,
