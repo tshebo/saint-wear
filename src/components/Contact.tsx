@@ -13,6 +13,11 @@ import {
   Send,
   CheckCircle2,
 } from "lucide-react";
+import {
+  RiFacebookLine,
+  RiInstagramLine,
+  RiWhatsappLine,
+} from "@remixicon/react";
 
 type ContactInfo = {
   icon: React.ReactNode;
@@ -21,7 +26,22 @@ type ContactInfo = {
   hover?: boolean;
 };
 
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
 export default function Contact({ bebasNeue }: { bebasNeue: any }) {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -44,25 +64,65 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
 
   const socialLinks = [
     {
-      Icon: Instagram,
-      link: "https://instagram.com/saintwear",
+      Icon: RiInstagramLine,
+      link: "https://instagram.com/saintwearsa",
       label: "Instagram",
     },
-    { Icon: Twitter, link: "https://twitter.com/saintwear", label: "Twitter" },
     {
-      Icon: Facebook,
-      link: "https://facebook.com/saintwear",
+      Icon: RiFacebookLine,
+      link: "https://facebook.com/saintwearsa",
       label: "Facebook",
+    },
+    {
+      Icon: RiWhatsappLine,
+      link: "https://wa.me/27662143840?text=Hello, I have a business query!",
+      label: "Whatsapp",
     },
   ];
 
+  const validateForm = () => {
+    const newErrors = { name: "", email: "", message: "" };
+    if (!formState.name) newErrors.name = "Name is required.";
+    if (!formState.email) {
+      newErrors.email = "Email is required.";
+    } else if (!isValidEmail(formState.email)) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+    if (!formState.message) newErrors.message = "Message is required.";
+    setErrors(newErrors);
+    return !newErrors.name && !newErrors.email && !newErrors.message;
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeyNUF9ZemQVD4DaTxuerZgml58IzxTMR1oNHss8rNE0jmC0w/formResponse";
+    const formData = new URLSearchParams();
+    formData.append("entry.818281177", formState.name);
+    formData.append("entry.107340153", formState.email);
+    formData.append("entry.836366557", formState.message);
+
+    try {
+      await fetch(formUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -183,22 +243,40 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-4">
                     <Input
+                      name="name"
                       type="text"
                       placeholder="Your Name"
+                      value={formState.name}
+                      onChange={handleInputChange}
                       required
                       className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-yellow-400 transition-colors"
                     />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm">{errors.name}</p>
+                    )}
                     <Input
+                      name="email"
                       type="email"
                       placeholder="Your Email"
+                      value={formState.email}
+                      onChange={handleInputChange}
                       required
                       className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-yellow-400 transition-colors"
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm">{errors.email}</p>
+                    )}
                     <Textarea
+                      name="message"
                       placeholder="Your Message"
+                      value={formState.message}
+                      onChange={handleInputChange}
                       required
                       className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-yellow-400 transition-colors min-h-[160px]"
                     />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm">{errors.message}</p>
+                    )}
                   </div>
                   <Button
                     type="submit"

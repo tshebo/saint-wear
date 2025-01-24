@@ -31,11 +31,15 @@ const bebasNeue = Bebas_Neue({
   display: "swap",
 });
 
+const isValidEmail = (email: string): boolean => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
 export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -54,9 +58,41 @@ export default function Contact() {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateForm = () => {
+    const { name, email, message } = formState;
+    if (!name || !email || !message) {
+      alert("All fields are required.");
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    if (!validateForm()) return;
+
+    const formUrl =
+      "https://docs.google.com/forms/d/e/1FAIpQLSeyNUF9ZemQVD4DaTxuerZgml58IzxTMR1oNHss8rNE0jmC0w/formResponse";
+    const formData = new URLSearchParams();
+    formData.append("entry.818281177", formState.name);
+    formData.append("entry.107340153", formState.email);
+    formData.append("entry.836366557", formState.message);
+
+    try {
+      await fetch(formUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const contactInfo = [
@@ -89,12 +125,12 @@ export default function Contact() {
   const socialMedia = [
     {
       icon: RiInstagramFill,
-      link: "https://instagram.com/saintwear",
+      link: "https://instagram.com/saintwearsa",
       label: "Instagram",
     },
     {
       icon: RiFacebookCircleFill,
-      link: "https://facebook.com/saintwear",
+      link: "https://facebook.com/saintwearssa",
       label: "Facebook",
     },
     {
@@ -173,7 +209,6 @@ export default function Contact() {
                       setFormState({
                         name: "",
                         email: "",
-                        subject: "",
                         message: "",
                       });
                     }}
@@ -202,12 +237,6 @@ export default function Contact() {
                         type: "email",
                         placeholder: "john@example.com",
                       },
-                      {
-                        id: "subject",
-                        label: "Subject",
-                        type: "text",
-                        placeholder: "How can we help you?",
-                      },
                     ].map((field) => (
                       <div key={field.id} className="relative group">
                         <label
@@ -232,6 +261,12 @@ export default function Contact() {
                           className="mt-1 w-full border-gray-300 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-300"
                           required
                         />
+                        {field.id === "email" &&
+                          !isValidEmail(formState.email) && (
+                            <p className="text-red-500 text-sm mt-1">
+                              Please enter a valid email address.
+                            </p>
+                          )}
                       </div>
                     ))}
                     <div className="relative group">
@@ -257,6 +292,11 @@ export default function Contact() {
                         className="mt-1 w-full border-gray-300 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-300"
                         required
                       />
+                      {!formState.message && (
+                        <p className="text-red-500 text-sm mt-1">
+                          Message cannot be empty.
+                        </p>
+                      )}
                     </div>
                   </div>
                   <Button
