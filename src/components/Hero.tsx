@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Briefcase } from "lucide-react";
+import { ChevronRight, Briefcase, MessageCircle } from "lucide-react";
 
 export default function Hero({ bebasNeue }: { bebasNeue: any }) {
   return (
@@ -43,17 +43,22 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
 
             {/* Buttons with Links */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link href="/collections" className="w-full sm:w-auto">
+              <a 
+                href="https://api.whatsapp.com/send/?phone=27662143840&text=Hello%2C+I+have+a+business+query%21&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <Button
                   size="lg"
-                  className="bg-slate-900 text-white hover:bg-black transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
+                  className="bg-green-500 text-white hover:bg-green-600 transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
                 >
                   <span className="flex items-center justify-center">
-                    View Collections
-                    <ChevronRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:translate-x-1 transition-transform" />
+                    Contact Us
+                    <MessageCircle className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </Button>
-              </Link>
+              </a>
               <Link href="/business" className="w-full sm:w-auto">
                 <Button
                   size="lg"
