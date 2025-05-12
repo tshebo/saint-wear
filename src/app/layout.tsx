@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import FloatingBtn from "@/components/social-btn";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 import { Bebas_Neue } from "next/font/google";
