@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { PhoneIcon, X } from "lucide-react";
-import { RiInstagramLine, RiFacebookLine, RiWhatsAppLine } from "@remixicon/react";
+import { RiInstagramLine, RiFacebookLine, RiWhatsappLine } from "@remixicon/react";
 
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(true);
