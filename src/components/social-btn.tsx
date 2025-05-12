@@ -19,7 +19,7 @@ export default function FloatingBtn() {
       <button
         onClick={toggleOpen}
         onKeyDown={handleKeyDown}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-primary-foreground shadow-lg transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-primary-foreground shadow-lg transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
         aria-label={isOpen ? "Close contact options" : "Open contact options"}
       >
         <div
