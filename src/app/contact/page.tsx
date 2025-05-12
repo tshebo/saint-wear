@@ -116,7 +116,7 @@ export default function Contact() {
     },
     {
       icon: Clock,
-      text: "Mon-Fri",
+      text: "Mon-Fri: 09:00 - 16:00",
       href: "#",
       label: "Opening hours",
     },
