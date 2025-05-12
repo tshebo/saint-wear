@@ -161,20 +161,20 @@ export default function CollectionsPage() {
   ];
 
   const collections = [
-    {
-      id: 1,
-      name: "Urban Classic Hoodie",
-      category: "Streetwear",
-      image: "/logo-black.png",
-      isNew: true,
-    },
-    {
-      id: 2,
-      name: "Urban Classic Hoodie",
-      category: "Streetwear",
-      image: "/sw (1).webp",
-      isNew: true,
-    },
+    // {
+    //   id: 1,
+    //   name: "Urban Classic Hoodie",
+    //   category: "Streetwear",
+    //   image: "/logo-black.png",
+    //   isNew: true,
+    // },
+    // {
+    //   id: 2,
+    //   name: "Urban Classic Hoodie",
+    //   category: "Streetwear",
+    //   image: "/sw (1).webp",
+    //   isNew: true,
+    // },
     {
       id: 3,
       name: "Collection 1",
@@ -532,7 +532,7 @@ export default function CollectionsPage() {
       </section>
 
       {/* Categories Section */}
-      <section
+{/*       <section
         className={`py-12 border-b backdrop-blur-sm sticky top-0 z-30 bg-white/80 transition-all duration-300 ${
           showCategories ? "translate-y-0" : "-translate-y-full"
         }`}
@@ -561,7 +561,7 @@ export default function CollectionsPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Products Grid */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
@@ -604,7 +604,7 @@ export default function CollectionsPage() {
                       </h3>
                     </div>
                     <div className="text-sm font-medium text-yellow-600/80 mt-2 tracking-wide uppercase">
-                      {item.category}
+{/*                       {item.category} */}
                     </div>
                   </div>
                 </div>
