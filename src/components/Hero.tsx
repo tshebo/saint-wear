@@ -51,7 +51,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
               >
                 <Button
                   size="lg"
-                  className="bg-slate-500 text-white hover:bg-green-600 transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
+                  className="bg-slate-900 text-white hover:bg-slate-600 transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
                 >
                   <span className="flex items-center justify-center">
                     Contact Us
