@@ -101,7 +101,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                     className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
                   >
                     {item.title}
-                    <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    {/*  <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" /> */}
                   </h3>
                   <p className="text-base sm:text-lg text-black/70">
                     {item.description}
