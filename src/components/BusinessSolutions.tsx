@@ -149,7 +149,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
                 <div className="flex items-center space-x-2 text-black">
                   <Printer className="w-5 h-5" />
                   <span className="font-semibold">
-                    10K+ Custom Prints Delivered
+                    Trusted since 2018
                   </span>
                 </div>
               </div>
