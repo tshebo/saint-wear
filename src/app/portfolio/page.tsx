@@ -181,7 +181,7 @@ export default function PortfolioPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-bg-yellow-50 to-blue-700 py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div
             className="absolute inset-0"
