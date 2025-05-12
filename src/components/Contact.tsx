@@ -52,8 +52,8 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
     },
     {
       icon: <Mail className="h-6 w-6" />,
-      text: "sales@saintwaer.co.za",
-      link: "mailto:sales@saintwaer.co.za",
+      text: "sales@saintwear.co.za",
+      link: "mailto:sales@saintwear.co.za",
       hover: true,
     },
     {
