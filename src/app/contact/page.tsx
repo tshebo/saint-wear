@@ -104,8 +104,8 @@ export default function Contact() {
     },
     {
       icon: Mail,
-      text: "sales@saintwaer.co.za",
-      href: "mailto:sales@saintwaer.co.za",
+      text: "sales@saintwear.co.za",
+      href: "mailto:sales@saintwear.co.za",
       label: "Email us",
     },
     {
@@ -116,7 +116,7 @@ export default function Contact() {
     },
     {
       icon: Clock,
-      text: "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM",
+      text: "Mon-Fri",
       href: "#",
       label: "Opening hours",
     },
