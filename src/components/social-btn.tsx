@@ -5,15 +5,15 @@ import { RiInstagramLine, RiFacebookLine, RiWhatsappLine } from "@remixicon/reac
 
 export default function FloatingBtn() {
   const [isOpen, setIsOpen] = useState(true);
-
+  
   const toggleOpen = () => setIsOpen(!isOpen);
-
+  
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "Enter" || event.key === " ") {
       toggleOpen();
     }
   };
-
+  
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
@@ -37,9 +37,8 @@ export default function FloatingBtn() {
           <X className="h-6 w-6" />
         </div>
       </button>
-
       <div className="absolute bottom-16 right-0 flex flex-col items-end space-y-2">
-      <a
+        <a
           href="https://api.whatsapp.com/send/?phone=27662143840&text=Hello%2C+I+have+a+business+query%21&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
@@ -47,7 +46,7 @@ export default function FloatingBtn() {
             isOpen
               ? "translate-y-0 scale-100 opacity-100"
               : "translate-y-4 scale-75 opacity-0"
-          } bg-gradient-to-br from-red-600 to-blue-700 hover:from-red-800 hover:to-blue-800`}
+          } bg-green-500 hover:bg-green-600`}
           aria-label="Contact us on WhatsApp"
           tabIndex={isOpen ? 0 : -1}
         >
@@ -61,7 +60,7 @@ export default function FloatingBtn() {
             isOpen
               ? "translate-y-0 scale-100 opacity-100"
               : "translate-y-4 scale-75 opacity-0"
-          } bg-gradient-to-br from-red-600 to-blue-700 hover:from-red-800 hover:to-blue-800`}
+          } bg-blue-600 hover:bg-blue-700`}
           aria-label="Contact us on Facebook"
           tabIndex={isOpen ? 0 : -1}
         >
