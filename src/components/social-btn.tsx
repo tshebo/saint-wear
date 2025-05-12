@@ -51,7 +51,7 @@ export default function FloatingBtn() {
           aria-label="Contact us on WhatsApp"
           tabIndex={isOpen ? 0 : -1}
         >
-          <RiWhatsAppLine className="h-6 w-6" />
+          <RiWhatsappLine className="h-6 w-6" />
         </a>
         <a
           href="https://www.facebook.com/SaintWearSA/"
