@@ -15,7 +15,7 @@ export const metadata = {
     locale: "en_ZA",
     images: [
       {
-        url: "/images/og/contact-og-image.jpg", // Replace with your actual image path
+        url: "/saintwear.co.za/logo-black.png", // Replace with your actual image path
         width: 1200,
         height: 630,
         alt: "Saint Wear Contact - Get in touch with our team",
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Contact Saint Wear | Let's Connect",
     description: "Have questions about Saint Wear products? Reach out to our team for prompt assistance.",
-    images: ["/images/og/contact-og-image.jpg"], // Replace with your actual image path
+    images: ["/saintwear.co.za/logo-black.png"], // Replace with your actual image path
     creator: "@saintwearsa",
     site: "@saintwearsa",
   },
@@ -68,7 +68,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ClothingStore",
   "name": "Saint Wear",
-  "image": "https://saintwear.co.za/images/store-front.jpg", // Replace with actual image
+  "image": "https://saintwear.co.za/logo-black.png", // Replace with actual image
   "@id": "https://saintwear.co.za",
   "url": "https://saintwear.co.za",
   "telephone": "+27780700179",
