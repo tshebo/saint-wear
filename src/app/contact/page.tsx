@@ -143,6 +143,9 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen">
+         <Script id="local-business-schema" type="application/ld+json">
+        {JSON.stringify(localBusinessSchema)}
+      </Script>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-400 py-20 lg:py-32 overflow-hidden">
         {/* Animated Background Pattern */}
