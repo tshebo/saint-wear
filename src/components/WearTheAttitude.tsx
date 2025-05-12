@@ -102,10 +102,10 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
                       {style.description}
                     </p>
                     <div className="flex items-center">
-                      <span className="text-white text-xs font-medium">
+{/*                       <span className="text-white text-xs font-medium">
                         Explore Collection
                       </span>
-                      <ArrowUpRight className="w-4 h-4 text-white ml-2 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      <ArrowUpRight className="w-4 h-4 text-white ml-2 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> */}
                     </div>
                   </div>
                 </div>
