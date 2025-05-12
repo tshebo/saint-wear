@@ -30,6 +30,7 @@ export default function RootLayout({
           <Navbar bebasNeue={bebasNeue} />
         </div>
         {children}
+        <FloatingBtn/>
         <Footer bebasNeue={bebasNeue} />
       </body>
     </html>
