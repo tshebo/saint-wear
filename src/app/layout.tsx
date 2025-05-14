@@ -14,7 +14,7 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: "Saint Wear",
-  description: "Saint Wear Ecom Showcase",
+  description: "Where fashion meets attitude. Discover bold, vibrant styles and custom business solutions at Saintwear.",
 };
 
 
