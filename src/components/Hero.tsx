@@ -22,18 +22,18 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="space-y-8">
             {/* Decorative Element */}
-            <div className="w-16 h-1 bg-slate-900 hidden sm:block" />
+            <div className="w-16 h-1 bg-black hidden sm:block" />
 
             {/* Main Content */}
             <div className="space-y-6">
               <h1
                 className={`${bebasNeue.className} text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-black leading-[0.9] hover:text-white transition-colors`}
               >
-                BOLD
+                DRIP
                 <br />
-                VIBRANT
+                WITH
                 <br />
-                STYLE
+                PURPOSE
               </h1>
               <p className="text-lg sm:text-xl text-black/80 font-medium max-w-2xl leading-relaxed">
                 Saintwear: Where fashion meets attitude for individuals and
