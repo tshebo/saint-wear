@@ -389,7 +389,7 @@ export default function CorporatePage() {
                 size="lg"
                 className="bg-white text-black hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
-                <Link href="">Request Quote</Link>
+                <Link href="https://wa.me/1234567890?text=I'm%20interested%20in%20getting%20a%20quote%20for%20corporate%20printing%20services">Request Quote</Link>
               </Button>
               <Button
                 size="lg"
