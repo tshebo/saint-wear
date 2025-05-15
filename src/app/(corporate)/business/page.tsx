@@ -372,7 +372,7 @@ export default function CorporatePage() {
       </section>
 
       {/* CTA Section with Hover Animations */}
-      <section className="bg-slate-900 py-20 transform transition-all duration-1000">
+      <section className="bg-black py-20 transform transition-all duration-1000">
         <FadeInSection>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2
@@ -389,7 +389,7 @@ export default function CorporatePage() {
                 size="lg"
                 className="bg-white text-black hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
-                <Link href="https://wa.me/1234567890?text=I'm%20interested%20in%20getting%20a%20quote%20for%20corporate%20printing%20services">Request Quote</Link>
+                <Link href="https://wa.me/27662143840?text=I'm%20interested%20in%20getting%20a%20quote%20for%20corporate%20printing%20services">Request Quote</Link>
               </Button>
               <Button
                 size="lg"
