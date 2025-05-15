@@ -70,12 +70,12 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
                   className={`text-black transition-colors relative group ${
                     pathname === item.href
                       ? "text-slate-900"
-                      : "hover:text-slate-600"
+                      : "hover:text-black"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-slate-900 transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all duration-300 ${
                       pathname === item.href
                         ? "w-full"
                         : "w-0 group-hover:w-full"
@@ -134,7 +134,7 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
                     className={`w-full justify-between text-left text-lg transition-all group ${
                       pathname === item.href
                         ? "bg-yellow-50 text-slate-900"
-                        : "hover:bg-yellow-50 hover:text-slate-600"
+                        : "hover:bg-yellow-50 hover:text-black"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
