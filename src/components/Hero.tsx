@@ -36,8 +36,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
                 PURPOSE
               </h1>
               <p className="text-lg sm:text-xl text-black/80 font-medium max-w-2xl leading-relaxed">
-                Saintwear: Where fashion meets attitude for individuals and
-                businesses
+             Don’t Just Wear It. Live It!A bold expression of KingdomCulture. Street-Ready. Spirit-Led.Faith-Rooted.
               </p>
             </div>
 
