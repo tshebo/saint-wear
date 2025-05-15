@@ -36,7 +36,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
                 PURPOSE
               </h1>
               <p className="text-lg sm:text-xl text-black/80 font-medium max-w-2xl leading-relaxed">
-             Don’t Just Wear It. Live It!A bold expression of KingdomCulture. Street-Ready. Spirit-Led.Faith-Rooted.
+             Don’t Just Wear It. Live It! A bold expression of Kingdom Culture. Street-Ready. Spirit-Led.Faith-Rooted.
               </p>
             </div>
 
