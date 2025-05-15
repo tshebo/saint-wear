@@ -22,7 +22,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4`}
           >
-            OUR STORY
+            SET APART. STYLED DIFFERENT.
           </h2>
           <div className="w-20 h-1 bg-white opacity-50" />
         </div>
@@ -36,9 +36,12 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
                 statement for individuals and businesses alike.
               </p>
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                We believe in the power of self-expression through bold colors,
-                daring patterns, and cutting-edge designs that defy convention,
-                whether you&#39;re an individual or a forward-thinking company.
+                Saint Wear is a Christian-owned streetwear and
+lifestyle brand designed for the young, bold, and
+unashamed.
+Every thread we stitch is a declaration — of <b>purpose</b>,
+of <b>faith</b>, of <b>identity</b>. We&#39;re not here to fit in.
+We’re here to stand out for Jesus
               </p>
             </div>
             {/* <div className="pt-4">
