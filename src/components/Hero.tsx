@@ -43,7 +43,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
             {/* Buttons with Links */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a 
-                href="https://api.whatsapp.com/send/?phone=27662143840&text=Hello%2C+I+have+a+business+query%21&type=phone_number&app_absent=0"
+                href="/collections"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
