@@ -58,7 +58,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
                   </span>
                 </Button>
               </a>
-              <Link href="/business" className="w-full sm:w-auto">
+{/*               <Link href="/business" className="w-full sm:w-auto">
                 <Button
                   size="lg"
                   variant="outline"
@@ -69,7 +69,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
                     <Briefcase className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" />
                   </span>
                 </Button>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -77,8 +77,8 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
           <div className="relative mt-8 lg:mt-0">
             {/* Image Container with Multiple Effects */}
             <div className="relative">
-              {/* Blue Background Shape */}
-              <div className="absolute inset-0 bg-slate-900 transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500 rounded-lg" />
+              {/* Black Background Shape */}
+              <div className="absolute inset-0 bg-black transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500 rounded-lg" />
 
               {/* Main Image Container */}
               <div className="relative z-10 aspect-square max-w-3xl mx-auto overflow-hidden rounded-lg shadow-xl group">
@@ -87,7 +87,7 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
 
                 {/* Image */}
                 <Image
-                  src="/sw (1).webp"
+                  src="/sw-corp.jpg"
                   alt="Saintwear Showcase"
                   fill
                   className="w-full object-cover transform group-hover:scale-105 transition-transform duration-700"
