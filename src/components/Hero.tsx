@@ -50,11 +50,11 @@ export default function Hero({ bebasNeue }: { bebasNeue: any }) {
               >
                 <Button
                   size="lg"
-                  className="bg-slate-900 text-white hover:bg-slate-600 transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
+                  className="bg-black text-white hover:bg-white hover:text-black transition-all duration-300 text-base sm:text-lg w-full px-8 py-6 shadow-lg hover:shadow-xl group"
                 >
                   <span className="flex items-center justify-center">
-                    Contact Us
-                    <MessageCircle className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" />
+                    SHOP THE COLLECTION
+{/*                     <MessageCircle className="ml-2 h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 transition-transform" /> */}
                   </span>
                 </Button>
               </a>
