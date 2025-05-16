@@ -35,7 +35,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
             lifestyle brand designed for the young, bold, and unashamed.
             Every thread we stitch is a declaration — of <b>purpose</b>,
             of <b>faith</b>, of <b>identity</b>. We&#39;re not here to fit in.
-            We’re here to stand out for Jesus
+            We’re here to stand out for Jesus.
               </p>
             </div>
             {/* <div className="pt-4">
