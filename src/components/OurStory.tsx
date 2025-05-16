@@ -22,7 +22,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4`}
           >
-            SET APART. STYLED DIFFERENT.
+            SET APART.<br>STYLED DIFFERENT.
           </h2>
           <div className="w-20 h-1 bg-white opacity-50" />
         </div>
@@ -31,14 +31,12 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                Born from the streets and raised in the vibrant culture of urban
-                life, Saintwear is more than just clothing – it&#39;s a
-                statement for individuals and businesses alike.
-              </p>
-              <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                Saint Wear is a Christian-owned streetwear and
+                             Saint Wear is a Christian-owned streetwear and
 lifestyle brand designed for the young, bold, and
 unashamed.
+              </p>
+              <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
+
 Every thread we stitch is a declaration — of <b>purpose</b>,
 of <b>faith</b>, of <b>identity</b>. We&#39;re not here to fit in.
 We’re here to stand out for Jesus
@@ -67,7 +65,7 @@ We’re here to stand out for Jesus
               {/* Image */}
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/sw (17).webp?height=600&width=800"
+                  src="/sw-story.jpg?height=600&width=800"
                   alt="Saintwear Design Process"
                   fill
                   className="object-cover transform group-hover:scale-105 transition-transform duration-700"
