@@ -28,8 +28,8 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
+          <div className="space-y-4">
+            <div className="space-y-3">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
             Saint Wear is a Christian-owned streetwear and
             lifestyle brand designed for the young, bold, and unashamed.
