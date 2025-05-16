@@ -22,7 +22,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4`}
           >
-            SET APART.<br>STYLED DIFFERENT.
+            SET APART.<br/>STYLED DIFFERENT.
           </h2>
           <div className="w-20 h-1 bg-white opacity-50" />
         </div>
