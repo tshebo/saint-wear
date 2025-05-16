@@ -1,4 +1,5 @@
 // metadata.js for Contact Page
+
 export const metadata = {
   // Basic SEO Metadata
   title: "Contact Saint Wear | Get in Touch with Our Team",
@@ -54,7 +55,7 @@ export const metadata = {
     },
   },
 
-  // Structured data for local business (Google Rich Results)
+  // Structured data verification (Google, Facebook, etc.)
   verification: {
     google: "your-google-verification-code", // Replace with your actual verification code
   },
@@ -85,42 +86,22 @@ export const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: -26.1052, // Replace with actual coordinates
-    longitude: 28.025, // Replace with actual coordinates
+    latitude: -26.1052,
+    longitude: 28.025,
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "16:00",
-  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "16:00",
+    },
+  ],
   sameAs: [
     "https://instagram.com/saintwearsa",
     "https://facebook.com/saintwearssa",
   ],
-}; /*}
+};
 
-// Implementation in Contact Page
-// To implement this metadata, you would typically:
-// 1. Import the metadata object into your page
-// 2. Use Next.js Metadata API to apply it to your page
-// Example:
-/*
-import { metadata, localBusinessSchema } from './metadata';
+  
 
-export { metadata };
-
-// To add the JSON-LD schema to the page:
-import Script from 'next/script';
-
-export default function ContactPage() {
-  return (
-    <>
-      <Script id="local-business-schema" type="application/ld+json">
-        {JSON.stringify(localBusinessSchema)}
-      </Script>
-      {/* Rest of your contact page component */
-    </>
-  );
-}
-*/
