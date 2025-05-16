@@ -136,7 +136,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
               <div className="relative rounded-lg overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent mix-blend-overlay" />
                 <Image
-                  src="/logo-black.png"
+                  src="/logo-r.png"
                   alt="Saintwear Custom Printing Facility"
                   width={800}
                   height={600}
@@ -148,9 +148,7 @@ export default function BusinessSolutions({ bebasNeue }: { bebasNeue: any }) {
               <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                 <div className="flex items-center space-x-2 text-black">
                   <Printer className="w-5 h-5" />
-                  <span className="font-semibold">
-                    Trusted since 2018
-                  </span>
+                  <span className="font-semibold">Trusted since 2018</span>
                 </div>
               </div>
             </div>

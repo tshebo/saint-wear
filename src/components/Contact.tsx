@@ -145,7 +145,7 @@ export default function Contact({ bebasNeue }: { bebasNeue: any }) {
           <div
             className="absolute inset-0 -z-10"
             style={{
-              backgroundImage: "url('/logo-black.png')",
+              backgroundImage: "url('/logo-r.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

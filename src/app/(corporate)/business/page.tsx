@@ -257,7 +257,7 @@ export default function CorporatePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="transform transition-all duration-1000 hover:scale-105">
                 <Image
-                  src="/logo-black.png"
+                  src="/logo-r.png"
                   alt="Corporate Printing Process"
                   width={600}
                   height={400}
@@ -389,7 +389,9 @@ export default function CorporatePage() {
                 size="lg"
                 className="bg-white text-black hover:bg-yellow-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
-                <Link href="https://wa.me/27662143840?text=I'm%20interested%20in%20getting%20a%20quote%20for%20corporate%20printing%20services">Request Quote</Link>
+                <Link href="https://wa.me/27662143840?text=I'm%20interested%20in%20getting%20a%20quote%20for%20corporate%20printing%20services">
+                  Request Quote
+                </Link>
               </Button>
               <Button
                 size="lg"

@@ -53,7 +53,7 @@ export default function Navbar({ bebasNeue }: { bebasNeue: any }) {
           {/* Logo */}
           <Link href="/">
             <Image
-              src="/logo-black.png" // Replace with your logo image path
+              src="/logo-r.png" // Replace with your logo image path
               alt="Logo"
               width={60} // Adjust width as needed
               height={50} // Adjust height as needed

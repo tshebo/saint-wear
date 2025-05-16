@@ -165,7 +165,7 @@ export default function CollectionsPage() {
     //   id: 1,
     //   name: "Urban Classic Hoodie",
     //   category: "Streetwear",
-    //   image: "/logo-black.png",
+    //   image: "/logo-r.png",
     //   isNew: true,
     // },
     // {
@@ -532,7 +532,7 @@ export default function CollectionsPage() {
       </section>
 
       {/* Categories Section */}
-{/*       <section
+      {/*       <section
         className={`py-12 border-b backdrop-blur-sm sticky top-0 z-30 bg-white/80 transition-all duration-300 ${
           showCategories ? "translate-y-0" : "-translate-y-full"
         }`}
@@ -604,7 +604,7 @@ export default function CollectionsPage() {
                       </h3>
                     </div>
                     <div className="text-sm font-medium text-yellow-600/80 mt-2 tracking-wide uppercase">
-{/*                       {item.category} */}
+                      {/*                       {item.category} */}
                     </div>
                   </div>
                 </div>
