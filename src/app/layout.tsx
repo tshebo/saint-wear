@@ -6,6 +6,7 @@ import FloatingBtn from "@/components/social-btn";
 import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 import { Bebas_Neue } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Analytics/>
         <div className="bg-yellow-400">
           <Navbar bebasNeue={bebasNeue} />
         </div>
