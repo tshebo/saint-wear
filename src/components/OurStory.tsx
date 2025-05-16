@@ -38,18 +38,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
             We’re here to stand out for Jesus.
               </p>
             </div>
-            {/* <div className="pt-4">
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-primary border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300 group"
-              >
-                <span className="flex items-center">
-                  Learn More 
-                  <ChevronRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform"/>
-                </span>
-              </Button>
-            </div> */}
+         
           </div>
 
           <div className="relative">
