@@ -31,15 +31,11 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-                             Saint Wear is a Christian-owned streetwear and
-lifestyle brand designed for the young, bold, and
-unashamed.
-              </p>
-              <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-
-Every thread we stitch is a declaration — of <b>purpose</b>,
-of <b>faith</b>, of <b>identity</b>. We&#39;re not here to fit in.
-We’re here to stand out for Jesus
+            Saint Wear is a Christian-owned streetwear and
+            lifestyle brand designed for the young, bold, and unashamed.
+            Every thread we stitch is a declaration — of <b>purpose</b>,
+            of <b>faith</b>, of <b>identity</b>. We&#39;re not here to fit in.
+            We’re here to stand out for Jesus
               </p>
             </div>
             {/* <div className="pt-4">
