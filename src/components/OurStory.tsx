@@ -18,7 +18,7 @@ export default function OurStory({ bebasNeue }: { bebasNeue: any }) {
       </div>
 
       <div className="max-w-[2000px] mx-auto relative">
-        <div className="max-w-xl mb-12 lg:mb-16">
+        <div className="max-w-xl mb-6 lg:mb-8">
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none mb-4`}
           >
