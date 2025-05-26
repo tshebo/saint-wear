@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
 type AccentColor = "blue" | "purple" | "yellow" | "red";
 
@@ -71,7 +70,7 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
         />
       </div>
 
-      <div className="max-w-[2000px] mx-auto relative">
+      <div className="max-w-[1600px] mx-auto relative">
         {/* Section Header */}
         <div className="mb-12 lg:mb-16">
           <div className="w-20 h-1 bg-white opacity-50 mb-6" />
@@ -84,11 +83,11 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
           </h2>
         </div>
 
-        {/* Grid: One image + one bullet list */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left: First image card */}
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left: Image Card */}
           <div className="group cursor-pointer">
-            <div className="relative overflow-hidden rounded-xl mb-6">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl mb-4">
               <div
                 className={`absolute inset-0 ${
                   accentColors[styles[0].accent]
@@ -100,35 +99,35 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
                   alt={styles[0].alt}
                   width={600}
                   height={600}
-                  className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                 />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <div className="absolute bottom-0 left-0 p-6">
-                  <p className="text-white/90 text-sm mb-2">
-                    {styles[0].description}
-                  </p>
-                </div>
               </div>
             </div>
             <h3
-              className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-white group-hover:text-yellow-400 transition-colors`}
+              className={`${bebasNeue.className} text-3xl sm:text-4xl font-bold text-white group-hover:text-yellow-400 transition-colors text-center`}
             >
               {styles[0].title}
             </h3>
           </div>
 
-          {/* Right: Bullet list (titles only) */}
-          <ul className="space-y-6 text-white text-lg">
+          {/* Right: Enhanced Bullet List */}
+          <div className="space-y-6">
             {styles.slice(1).map((style, index) => (
-              <li key={index} className="flex items-start">
-                <span className="mr-3 mt-1 text-yellow-400">•</span>
-                <h4 className={`${bebasNeue.className} text-xl font-bold`}>
+              <div
+                key={index}
+                className="flex items-start gap-4 border border-white/10 rounded-xl p-4 hover:border-yellow-400 transition-all group"
+              >
+                <div className="mt-1">
+                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                </div>
+                <h4
+                  className={`${bebasNeue.className} text-xl sm:text-2xl text-white font-bold group-hover:text-yellow-400 transition-colors`}
+                >
                   {style.title}
                 </h4>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>
