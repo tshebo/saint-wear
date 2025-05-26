@@ -13,9 +13,9 @@ interface StyleItem {
 export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
   const styles: StyleItem[] = [
     {
-      title: "Street Style",
+      title: "Street Styl",
       description: "Urban-inspired casual wear",
-      image: "/sw (20).webp",
+      image: "/wta.webp",
       alt: "Model wearing street style fashion",
       accent: "blue",
     },
@@ -103,11 +103,11 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
                 />
               </div>
             </div>
-            <h3
+{/*             <h3
               className={`${bebasNeue.className} text-3xl sm:text-4xl font-bold text-white group-hover:text-yellow-400 transition-colors text-center`}
             >
               {styles[0].title}
-            </h3>
+            </h3> */}
           </div>
 
           {/* Right: Enhanced Bullet List */}
