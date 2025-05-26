@@ -21,15 +21,29 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
       accent: "blue",
     },
     {
-      title: "Casual and Relaxed",
-      description: "Sophisticated casual fashion that stands out",
+      title: "Kingdom-centered designs",
+      description: "",
       image: "",
       alt: "",
       accent: "purple",
     },
     {
-      title: "Bold Patterns",
-      description: "Eye-catching designs that make a statement",
+      title: "Quality that you can feel.",
+      description: "",
+      image: "",
+      alt: "",
+      accent: "yellow",
+    },
+    {
+      title: "A voice for the next generation",
+      description: "",
+      image: "",
+      alt: "",
+      accent: "yellow",
+    },
+    {
+      title: "Created with excellence -- as unto the Lord",
+      description: "",
       image: "",
       alt: "",
       accent: "yellow",
@@ -104,17 +118,14 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
             </h3>
           </div>
 
-          {/* Right: Bullet list */}
+          {/* Right: Bullet list (titles only) */}
           <ul className="space-y-6 text-white text-lg">
             {styles.slice(1).map((style, index) => (
               <li key={index} className="flex items-start">
                 <span className="mr-3 mt-1 text-yellow-400">•</span>
-                <div>
-                  <h4 className={`${bebasNeue.className} text-xl font-bold`}>
-                    {style.title}
-                  </h4>
-                  <p className="text-white/80 text-base">{style.description}</p>
-                </div>
+                <h4 className={`${bebasNeue.className} text-xl font-bold`}>
+                  {style.title}
+                </h4>
               </li>
             ))}
           </ul>
