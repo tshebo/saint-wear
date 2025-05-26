@@ -23,18 +23,17 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
     {
       title: "Casual and Relaxed",
       description: "Sophisticated casual fashion that stands out",
-      image: "/sw (16).webp",
-      alt: "Urban chic fashion showcase",
+      image: "",
+      alt: "",
       accent: "purple",
     },
     {
       title: "Bold Patterns",
       description: "Eye-catching designs that make a statement",
-      image: "/sw (45).webp",
-      alt: "Bold pattern fashion display",
+      image: "",
+      alt: "",
       accent: "yellow",
     },
-  
   ];
 
   const accentColors: Record<AccentColor, string> = {
@@ -65,62 +64,60 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
           <h2
             className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold text-white leading-none`}
           >
-            WEAR THE
+            MORE THAN MERCH.
             <br />
-            ATTITUDE
+            IT&apos;S A MOVEMENT
           </h2>
         </div>
 
-        {/* Styles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-          {styles.map((style, index) => (
-            <div key={index} className="group cursor-pointer">
-              {/* Image Container */}
-              <div className="relative overflow-hidden rounded-xl mb-6">
-                {/* Color Overlay */}
-                <div
-                  className={`absolute inset-0 ${
-                    accentColors[style.accent]
-                  } transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-10 mix-blend-overlay`}
+        {/* Grid: One image + one bullet list */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left: First image card */}
+          <div className="group cursor-pointer">
+            <div className="relative overflow-hidden rounded-xl mb-6">
+              <div
+                className={`absolute inset-0 ${
+                  accentColors[styles[0].accent]
+                } transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-10 mix-blend-overlay`}
+              />
+              <div className="aspect-square">
+                <Image
+                  src={styles[0].image}
+                  alt={styles[0].alt}
+                  width={600}
+                  height={600}
+                  className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                 />
-
-                {/* Image */}
-                <div className="aspect-square">
-                  <Image
-                    src={style.image}
-                    alt={style.alt}
-                    width={600}
-                    height={600}
-                    className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-
-                {/* Hover Details */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <p className="text-white/90 text-sm mb-2">
-                      {style.description}
-                    </p>
-                    <div className="flex items-center">
-{/*                       <span className="text-white text-xs font-medium">
-                        Explore Collection
-                      </span>
-                      <ArrowUpRight className="w-4 h-4 text-white ml-2 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" /> */}
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              {/* Title */}
-              <div className="space-y-2">
-                <h3
-                  className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-white group-hover:text-yellow-400 transition-colors`}
-                >
-                  {style.title}
-                </h3>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute bottom-0 left-0 p-6">
+                  <p className="text-white/90 text-sm mb-2">
+                    {styles[0].description}
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
+            <h3
+              className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold text-white group-hover:text-yellow-400 transition-colors`}
+            >
+              {styles[0].title}
+            </h3>
+          </div>
+
+          {/* Right: Bullet list */}
+          <ul className="space-y-6 text-white text-lg">
+            {styles.slice(1).map((style, index) => (
+              <li key={index} className="flex items-start">
+                <span className="mr-3 mt-1 text-yellow-400">•</span>
+                <div>
+                  <h4 className={`${bebasNeue.className} text-xl font-bold`}>
+                    {style.title}
+                  </h4>
+                  <p className="text-white/80 text-base">{style.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
