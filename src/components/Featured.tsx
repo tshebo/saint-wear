@@ -2,8 +2,9 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import type { NextFont } from "next/dist/compiled/@next/font";
 
-export default function Featured({ bebasNeue }: { bebasNeue: any }) {
+export default function Featured({ bebasNeue }: { bebasNeue: NextFont }) {
   const collections = [
     {
       title: "Elevated",
@@ -75,30 +76,32 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                 </Link>
               </div>
 
-{/*               <div className="space-y-4">
-                <div className="flex gap-2 flex-wrap">
-                  {item.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="text-xs font-semibold bg-slate-900 text-white px-3 py-1 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div> */}
+              {false && (
+                <div className="space-y-4">
+                  <div className="flex gap-2 flex-wrap">
+                    {item.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="text-xs font-semibold bg-slate-900 text-white px-3 py-1 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-{/*                 <div className="space-y-2">
-                  <h3
-                    className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
-                  >
-                    {item.title}
-                    <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                  </h3>
-                  <p className="text-base sm:text-lg text-black/70">
-                    {item.description}
-                  </p>
-                </div> */}
-              </div>
+                  <div className="space-y-2">
+                    <h3
+                      className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
+                    >
+                      {item.title}
+                      <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    </h3>
+                    <p className="text-base sm:text-lg text-black/70">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -108,7 +111,8 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
           <h3
             className={`${bebasNeue.className} text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight`}
           >
-            STYLE MEETS SCRIPTURE,<br />
+            STYLE MEETS SCRIPTURE,
+            <br />
             CULTURE MEETS CALLING
           </h3>
         </div>
