@@ -42,7 +42,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
       </div>
 
       <div className="max-w-[2000px] mx-auto relative">
-        {/* Section Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 lg:mb-16">
           <div>
             <div className="w-16 h-1 bg-black mb-6 hidden sm:block" />
@@ -58,11 +57,9 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
           </p>
         </div>
 
-        {/* Featured Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {collections.map((item, index) => (
             <div key={index} className="group cursor-pointer">
-              {/* Image Container */}
               <div className="relative overflow-hidden rounded-lg mb-6">
                 <div className="absolute inset-0 bg-slate-900 transform group-hover:scale-95 transition-transform duration-500 rounded-lg" />
                 <Link href="/collections">
@@ -78,7 +75,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                 </Link>
               </div>
 
-              {/* Content */}
               <div className="space-y-4">
                 <div className="flex gap-2 flex-wrap">
                   {item.tags.map((tag, tagIndex) => (
@@ -107,7 +103,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
           ))}
         </div>
 
-        {/* Centered Text Row */}
         <div className="text-center mt-16 lg:mt-20">
           <div className="w-16 h-1 bg-black mx-auto mb-8" />
           <h3
