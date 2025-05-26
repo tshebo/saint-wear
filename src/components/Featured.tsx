@@ -111,6 +111,18 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
             </div>
           ))}
         </div>
+       {/* Centered Text Row */}
+        <div className="text-center mt-16 lg:mt-20">
+          <div className="w-16 h-1 bg-black mx-auto mb-8" />
+          <h3
+            className={`${bebasNeue.className} text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight`}
+          >
+            STYLE MEETS SCRIPTURE,<br />
+            CULTURE MEETS CALLING
+          </h3>
+        </div>
+      </div>
+    </section>
       </div>
     </section>
   );
