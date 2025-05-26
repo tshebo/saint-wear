@@ -30,7 +30,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
 
   return (
     <section className="relative bg-gradient-to-b from-yellow-400 to-yellow-300 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
@@ -54,7 +53,8 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
             </h2>
           </div>
           <p className="text-xl sm:text-2xl text-black/70 mt-4 sm:mt-0">
-            FROM STATEMENT TEES TO HOODIES, AND SWEATERS -OUR GEAR IS MADE TO ISNPIRE UPLIFT AND START CONVERSATIONS.
+            FROM STATEMENT TEES TO HOODIES, AND SWEATERS – OUR GEAR IS MADE TO
+            INSPIRE, UPLIFT AND START CONVERSATIONS.
           </p>
         </div>
 
@@ -64,10 +64,8 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
             <div key={index} className="group cursor-pointer">
               {/* Image Container */}
               <div className="relative overflow-hidden rounded-lg mb-6">
-                {/* Background Shape */}
                 <div className="absolute inset-0 bg-slate-900 transform group-hover:scale-95 transition-transform duration-500 rounded-lg" />
                 <Link href="/collections">
-                  {/* Image Wrapper */}
                   <div className="relative z-10 aspect-[3/4] transform group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
                     <Image
                       src={item.image}
@@ -75,7 +73,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                       fill
                       className="object-cover rounded-lg transform group-hover:scale-105 transition-transform duration-700"
                     />
-                    {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
                   </div>
                 </Link>
@@ -83,8 +80,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
 
               {/* Content */}
               <div className="space-y-4">
-                {/* Tags */}
-{/*                 <div className="flex gap-2 flex-wrap">
+                <div className="flex gap-2 flex-wrap">
                   {item.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -93,25 +89,25 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                       {tag}
                     </span>
                   ))}
-                </div> */}
+                </div>
 
-                {/* Title and Description */}
-{/*                 <div className="space-y-2">
+                <div className="space-y-2">
                   <h3
                     className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
                   >
                     {item.title}
-                     <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                    <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </h3>
                   <p className="text-base sm:text-lg text-black/70">
                     {item.description}
                   </p>
-                </div> */}
+                </div>
               </div>
             </div>
           ))}
         </div>
-       {/* Centered Text Row */}
+
+        {/* Centered Text Row */}
         <div className="text-center mt-16 lg:mt-20">
           <div className="w-16 h-1 bg-black mx-auto mb-8" />
           <h3
@@ -121,8 +117,6 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
             CULTURE MEETS CALLING
           </h3>
         </div>
-      </div>
-    </section>
       </div>
     </section>
   );
