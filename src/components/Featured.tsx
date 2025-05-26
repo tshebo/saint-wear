@@ -48,7 +48,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
           <div>
             <div className="w-16 h-1 bg-black mb-6 hidden sm:block" />
             <h2
-              className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold leading-none`}
+              className={`${bebasNeue.className} text-4xl sm:text-5xl lg:text-6xl font-bold leading-none`}
             >
               HOLY THREADZ FOR A NEW GENERATION
             </h2>
@@ -84,7 +84,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
               {/* Content */}
               <div className="space-y-4">
                 {/* Tags */}
-                <div className="flex gap-2 flex-wrap">
+{/*                 <div className="flex gap-2 flex-wrap">
                   {item.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -93,7 +93,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
                 {/* Title and Description */}
 {/*                 <div className="space-y-2">
