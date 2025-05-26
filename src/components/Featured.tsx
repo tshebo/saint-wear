@@ -75,7 +75,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                 </Link>
               </div>
 
-              <div className="space-y-4">
+{/*               <div className="space-y-4">
                 <div className="flex gap-2 flex-wrap">
                   {item.tags.map((tag, tagIndex) => (
                     <span
@@ -85,9 +85,9 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                       {tag}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
-                <div className="space-y-2">
+{/*                 <div className="space-y-2">
                   <h3
                     className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
                   >
@@ -97,7 +97,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                   <p className="text-base sm:text-lg text-black/70">
                     {item.description}
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -106,7 +106,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
         <div className="text-center mt-16 lg:mt-20">
           <div className="w-16 h-1 bg-black mx-auto mb-8" />
           <h3
-            className={`${bebasNeue.className} text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight`}
+            className={`${bebasNeue.className} text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight`}
           >
             STYLE MEETS SCRIPTURE,<br />
             CULTURE MEETS CALLING
