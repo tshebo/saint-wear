@@ -13,11 +13,11 @@ interface StyleItem {
 export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
   const styles: StyleItem[] = [
     {
-      title: "Street Styl",
+      title: "Street Style",
       description: "Urban-inspired casual wear",
       image: "/wta.webp",
       alt: "Model wearing street style fashion",
-      accent: "blue",
+      accent: "yellow",
     },
     {
       title: "Kingdom-centered designs",
