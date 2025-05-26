@@ -99,7 +99,7 @@ export default function WearTheAttitude({ bebasNeue }: { bebasNeue: any }) {
                   alt={styles[0].alt}
                   width={600}
                   height={600}
-                  className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
+                  className="object-contain w-full h-full transform group-hover:scale-105 transition-transform duration-700 rounded-2xl"
                 />
               </div>
             </div>
