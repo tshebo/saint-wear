@@ -50,11 +50,11 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
             <h2
               className={`${bebasNeue.className} text-5xl sm:text-6xl lg:text-8xl font-bold leading-none`}
             >
-              FEATURED
+              HOLY THREADZ FOR A NEW GENERATION
             </h2>
           </div>
-          <p className="text-lg sm:text-xl text-black/70 mt-4 sm:mt-0">
-            Discover our latest collections
+          <p className="text-xl sm:text-2xl text-black/70 mt-4 sm:mt-0">
+            FROM STATEMENT TEES TO HOODIES, AND SWEATERS -OUR GEAR IS MADE TO ISNPIRE UPLIFT AND START CONVERSATIONS.
           </p>
         </div>
 
@@ -96,17 +96,17 @@ export default function Featured({ bebasNeue }: { bebasNeue: any }) {
                 </div>
 
                 {/* Title and Description */}
-                <div className="space-y-2">
+{/*                 <div className="space-y-2">
                   <h3
                     className={`${bebasNeue.className} text-2xl sm:text-3xl font-bold group-hover:text-blue-600 transition-colors flex items-center`}
                   >
                     {item.title}
-                    {/*  <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" /> */}
+                     <ArrowRight className="ml-2 h-6 w-6 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                   </h3>
                   <p className="text-base sm:text-lg text-black/70">
                     {item.description}
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
