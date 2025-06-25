@@ -24,7 +24,7 @@ export default function Featured({ bebasNeue }: { bebasNeue: NextFont }) {
       title: "Urban",
       description: "Bold. Daring. Unforgettable.",
       tags: ["Premium", "Exclusive"],
-      image: "ft-sect.jpg",
+      image: "/ft-sect.jpg",
       alt: "Urban fashion with bold patterns and colors",
     },
   ];
